@@ -1,0 +1,699 @@
+# Entity: vendor
+
+main: kit: entity: vendor: {
+
+  alias: field: {}
+
+  fields: {
+    about: {
+      h: "About"
+      n: "about"
+      r: true
+      t: "`$OBJECT`"
+    }
+    api_url: {
+      h: "Api Url"
+      n: "api_url"
+      r: true
+      sh: "Absolute URL."
+      t: "`$STRING`"
+    }
+    catalog: {
+      h: "Catalog"
+      n: "catalog"
+      r: true
+      t: "`$OBJECT`"
+    }
+    country: {
+      h: "Country"
+      n: "country"
+      r: true
+      t: "`$ANY`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      sh: "Stable vendor id."
+      t: "`$STRING`"
+    }
+    logo_url: {
+      h: "Logo Url"
+      n: "logo_url"
+      r: true
+      t: "`$ANY`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: true
+      t: "`$STRING`"
+    }
+    product_categories: {
+      h: "Product Categories"
+      n: "product_categories"
+      r: true
+      t: "`$ARRAY`"
+    }
+    profile_url: {
+      h: "Profile Url"
+      n: "profile_url"
+      r: true
+      sh: "Absolute URL."
+      t: "`$STRING`"
+    }
+    rating: {
+      h: "Rating"
+      n: "rating"
+      r: true
+      t: "`$OBJECT`"
+    }
+    region: {
+      h: "Region"
+      n: "region"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    reviews: {
+      h: "Reviews"
+      n: "reviews"
+      r: true
+      t: "`$OBJECT`"
+    }
+    shipping: {
+      h: "Shipping"
+      n: "shipping"
+      r: true
+      t: "`$OBJECT`"
+    }
+    slug: {
+      h: "Slug"
+      n: "slug"
+      r: true
+      t: "`$STRING`"
+    }
+    sources: {
+      h: "Sources"
+      n: "sources"
+      r: true
+      t: "`$OBJECT`"
+    }
+    website_url: {
+      h: "Website Url"
+      n: "website_url"
+      r: true
+      sh: "Peptide Library link to the vendor's site (may be an affiliate link)."
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "vendor"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /vendors/{id}/prices"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "8"
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "peptides"
+                k: "query"
+                n: "category"
+                or: "category"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "USD"
+                k: "query"
+                n: "currency"
+                or: "currency"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "cursor"
+                or: "cursor"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "id,product_id,product_name"
+                k: "query"
+                n: "field"
+                or: "fields"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "vial"
+                k: "query"
+                n: "form"
+                or: "form"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "in_stock"
+                or: "in_stock"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: "bpc-157"
+                k: "query"
+                n: "peptide"
+                or: "peptide"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "price_max"
+                or: "price_max"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                k: "query"
+                n: "price_min"
+                or: "price_min"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                k: "query"
+                n: "product"
+                or: "product"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "search"
+                or: "search"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "US"
+                k: "query"
+                n: "ships_to"
+                or: "ships_to"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "sort"
+                or: "sort"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "strength_max_mg"
+                or: "strength_max_mg"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                k: "query"
+                n: "strength_min_mg"
+                or: "strength_min_mg"
+                r: false
+                t: "`$NUMBER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/vendors/{id}/prices"
+          q: {
+            "$action": "price"
+            exist: [
+              "id"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "vendors"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "prices"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /vendors/{id}/products"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "8"
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "peptides"
+                k: "query"
+                n: "category"
+                or: "category"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "cursor"
+                or: "cursor"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "id,peptide,form"
+                k: "query"
+                n: "field"
+                or: "fields"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "vial"
+                k: "query"
+                n: "form"
+                or: "form"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "in_stock"
+                or: "in_stock"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: "bpc-157"
+                k: "query"
+                n: "peptide"
+                or: "peptide"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "search"
+                or: "search"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "US"
+                k: "query"
+                n: "ships_to"
+                or: "ships_to"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "sort"
+                or: "sort"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/vendors/{id}/products"
+          q: {
+            "$action": "product"
+            exist: [
+              "id"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "vendors"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "products"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /vendors"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "US"
+                k: "query"
+                n: "country"
+                or: "country"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "cursor"
+                or: "cursor"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "id,slug,name"
+                k: "query"
+                n: "field"
+                or: "fields"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "min_rating"
+                or: "min_rating"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                k: "query"
+                n: "peptide"
+                or: "peptide"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "product_category"
+                or: "product_category"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "search"
+                or: "search"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "US"
+                k: "query"
+                n: "ships_to"
+                or: "ships_to"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "sort"
+                or: "sort"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/vendors"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "vendors"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /vendors/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "8"
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "US"
+                k: "query"
+                n: "ships_to"
+                or: "ships_to"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/vendors/{id}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "vendors"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /vendors/compare"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "8,13"
+                k: "query"
+                n: "ids"
+                or: "ids"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "US"
+                k: "query"
+                n: "ships_to"
+                or: "ships_to"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/vendors/compare"
+          q: {
+            "$action": "compare"
+            exist: [
+              "ids"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "vendors"
+            }
+            {
+              lit: "compare"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /vendors/{id}/shipping"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "8"
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "US"
+                k: "query"
+                n: "ships_to"
+                or: "ships_to"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/vendors/{id}/shipping"
+          q: {
+            "$action": "shipping"
+            exist: [
+              "id"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "vendors"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "shipping"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,117 @@
+{
+  "existing": {
+    "study": {
+      "STUDY00": {
+        "analog_compound": true,
+        "authors": "sc9",
+        "citations": [],
+        "cited_by": [],
+        "doi": "scc",
+        "evidence_classification": "scd",
+        "evidence_classification_label": "sce",
+        "id": "STUDY00",
+        "journal": "sd0",
+        "limitations": [],
+        "nct_id": "NCT01",
+        "pmid": "sd3",
+        "population": "sd4",
+        "publication_year": "sd5",
+        "research_model": "sd6",
+        "sample_size": "sd7",
+        "source_url": "sd8",
+        "study_type": "sd9",
+        "summary": "sda",
+        "title": "sdb",
+        "slug": "SLUG01"
+      },
+      "STUDY01": {
+        "analog_compound": true,
+        "authors": "s191",
+        "citations": [],
+        "cited_by": [],
+        "doi": "s194",
+        "evidence_classification": "s195",
+        "evidence_classification_label": "s196",
+        "id": "STUDY01",
+        "journal": "s198",
+        "limitations": [],
+        "nct_id": "NCT01",
+        "pmid": "s19b",
+        "population": "s19c",
+        "publication_year": "s19d",
+        "research_model": "s19e",
+        "sample_size": "s19f",
+        "source_url": "s1a0",
+        "study_type": "s1a1",
+        "summary": "s1a2",
+        "title": "s1a3",
+        "slug": "SLUG01"
+      },
+      "STUDY02": {
+        "analog_compound": true,
+        "authors": "s259",
+        "citations": [],
+        "cited_by": [],
+        "doi": "s25c",
+        "evidence_classification": "s25d",
+        "evidence_classification_label": "s25e",
+        "id": "STUDY02",
+        "journal": "s260",
+        "limitations": [],
+        "nct_id": "NCT01",
+        "pmid": "s263",
+        "population": "s264",
+        "publication_year": "s265",
+        "research_model": "s266",
+        "sample_size": "s267",
+        "source_url": "s268",
+        "study_type": "s269",
+        "summary": "s26a",
+        "title": "s26b",
+        "slug": "SLUG01"
+      }
+    }
+  },
+  "new": {
+    "study": {
+      "study_ref01": {
+        "analog_compound": true,
+        "authors": "s321",
+        "citations": [],
+        "cited_by": [],
+        "doi": "s324",
+        "evidence_classification": "s325",
+        "evidence_classification_label": "s326",
+        "journal": "s328",
+        "limitations": [],
+        "nct_id": "NCT01",
+        "pmid": "s32b",
+        "population": "s32c",
+        "publication_year": "s32d",
+        "research_model": "s32e",
+        "sample_size": "s32f",
+        "source_url": "s330",
+        "study_type": "s331",
+        "summary": "s332",
+        "title": "s333"
+      }
+    }
+  },
+  "requests": {
+    "GET /peptides/{slug}/studies": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /studies": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /studies/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

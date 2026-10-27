@@ -1,0 +1,61 @@
+# Entity: meta
+
+main: kit: entity: meta: {
+
+  alias: field: {}
+
+  fields: {
+    database: {
+      h: "Database"
+      n: "database"
+      r: true
+      t: "`$STRING`"
+    }
+    release: {
+      h: "Release"
+      n: "release"
+      r: true
+      t: "`$STRING`"
+    }
+    status: {
+      h: "Status"
+      n: "status"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "meta"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /health"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/health"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "health"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.meta`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

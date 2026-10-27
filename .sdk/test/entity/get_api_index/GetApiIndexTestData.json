@@ -1,0 +1,52 @@
+{
+  "existing": {
+    "get_api_index": {
+      "GET_API_INDEX00": {
+        "documentation": "s3c",
+        "endpoints": [],
+        "name": "s3e",
+        "openapi": "s3f",
+        "release": "s40",
+        "version": "s41",
+        "id": "GET_API_INDEX00"
+      },
+      "GET_API_INDEX01": {
+        "documentation": "s78",
+        "endpoints": [],
+        "name": "s7a",
+        "openapi": "s7b",
+        "release": "s7c",
+        "version": "s7d",
+        "id": "GET_API_INDEX01"
+      },
+      "GET_API_INDEX02": {
+        "documentation": "sb4",
+        "endpoints": [],
+        "name": "sb6",
+        "openapi": "sb7",
+        "release": "sb8",
+        "version": "sb9",
+        "id": "GET_API_INDEX02"
+      }
+    }
+  },
+  "new": {
+    "get_api_index": {
+      "get_api_index_ref01": {
+        "documentation": "sf0",
+        "endpoints": [],
+        "name": "sf2",
+        "openapi": "sf3",
+        "release": "sf4",
+        "version": "sf5"
+      }
+    }
+  },
+  "requests": {
+    "GET /": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

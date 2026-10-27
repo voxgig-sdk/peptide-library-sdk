@@ -1,0 +1,44 @@
+# BasicStudyFlow
+
+main: kit: flow: BasicStudyFlow:
+{
+  entity: "study",
+  kind: "basic",
+  name: "BasicStudyFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "study_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "study_ref01",
+        srcdatavar: "study_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "study01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-study_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicStudyFlow"
+}

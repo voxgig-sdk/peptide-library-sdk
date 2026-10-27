@@ -1,0 +1,44 @@
+# BasicResearchStatisticFlow
+
+main: kit: flow: BasicResearchStatisticFlow:
+{
+  entity: "research_statistic",
+  kind: "basic",
+  name: "BasicResearchStatisticFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "research_statistic_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "research_statistic_ref01",
+        srcdatavar: "research_statistic_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "research_statistic01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-research_statistic_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicResearchStatisticFlow"
+}

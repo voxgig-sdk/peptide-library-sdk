@@ -1,0 +1,10 @@
+# Entity Models
+
+@"./get_api_index.aontu"
+@"./meta.aontu"
+@"./price.aontu"
+@"./product.aontu"
+@"./research.aontu"
+@"./research_statistic.aontu"
+@"./study.aontu"
+@"./vendor.aontu"

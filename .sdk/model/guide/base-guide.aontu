@@ -1,0 +1,164 @@
+# Generated from the API definition and overwritten on every build: do not
+# edit this file. Put customizations in the guide entry file, which includes
+# this one and overrides its defaults:
+#   guide.aontu
+
+guide: {
+  metrics: count: entity: 8
+  metrics: count: path: 31
+  metrics: count: method: 31
+
+  entity: get_api_index: {
+    path: "/": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: meta: {
+    path: "/health": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.meta`")|top
+    }
+  }
+
+  entity: price: {
+    path: "/prices": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/prices/compare": {
+      action: "compare": {}
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: product: {
+    path: "/products": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/products/{id}": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: research: {
+    path: "/categories": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/peptides": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/peptides/{slug}": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+    path: "/peptides/{slug}/research": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+    path: "/regulatory-status/{slug}": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+    path: "/research-areas": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/search": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: research_statistic: {
+    path: "/research/categories": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/research/charts/{id}": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+    path: "/research/datasets": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/research/peptides/{slug}/statistics": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+    path: "/research/publications": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/research/reports": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/research/statistics": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/research/statistics/{id}": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+    path: "/research/trends": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: study: {
+    path: "/peptides/{slug}/studies": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/studies": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/studies/{id}": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: vendor: {
+    path: "/vendors": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/vendors/compare": {
+      action: "compare": {}
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+    path: "/vendors/{id}": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+    path: "/vendors/{id}/prices": {
+      action: "price": {}
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/vendors/{id}/products": {
+      action: "product": {}
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/vendors/{id}/shipping": {
+      action: "shipping": {}
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+}

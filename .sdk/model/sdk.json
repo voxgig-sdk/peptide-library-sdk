@@ -1,0 +1,5767 @@
+{
+  "def": "peptide-library_0.1.0.json",
+  "main": {
+    "def": {
+      "desc": ""
+    },
+    "kit": {
+      "author": {
+        "name": "",
+        "url": ""
+      },
+      "config": {
+        "docs_order": [
+          "ts",
+          "py",
+          "php",
+          "go",
+          "rb",
+          "lua"
+        ],
+        "headers": {
+          "content-type": "application/json"
+        },
+        "repr": "auto"
+      },
+      "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
+      "entity": {
+        "get_api_index": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "documentation": {
+              "a": true,
+              "h": "Documentation",
+              "n": "documentation",
+              "r": true,
+              "sh": "Absolute URL.",
+              "t": "`$STRING`"
+            },
+            "endpoints": {
+              "a": true,
+              "h": "Endpoints",
+              "n": "endpoints",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "openapi": {
+              "a": true,
+              "h": "Openapi",
+              "n": "openapi",
+              "r": true,
+              "sh": "Absolute URL.",
+              "t": "`$STRING`"
+            },
+            "release": {
+              "a": true,
+              "h": "Release",
+              "n": "release",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "version": {
+              "a": true,
+              "h": "Version",
+              "n": "version",
+              "r": true,
+              "t": "`$STRING`"
+            }
+          },
+          "name": "get_api_index",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "meta": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "database": {
+              "a": true,
+              "h": "Database",
+              "n": "database",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "release": {
+              "a": true,
+              "h": "Release",
+              "n": "release",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "status": {
+              "a": true,
+              "h": "Status",
+              "n": "status",
+              "r": true,
+              "t": "`$STRING`"
+            }
+          },
+          "name": "meta",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /health",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/health",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "health"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.meta`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "price": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "availability": {
+              "a": true,
+              "h": "Availability",
+              "n": "availability",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "currency": {
+              "a": true,
+              "h": "Currency",
+              "n": "currency",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "first_seen_at": {
+              "a": true,
+              "h": "First Seen At",
+              "n": "first_seen_at",
+              "r": true,
+              "t": "`$ANY`"
+            },
+            "form": {
+              "a": true,
+              "h": "Form",
+              "n": "form",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "sh": "Offer id.",
+              "t": "`$STRING`"
+            },
+            "is_affiliate_link": {
+              "a": true,
+              "h": "Is Affiliate Link",
+              "n": "is_affiliate_link",
+              "r": true,
+              "t": "`$BOOLEAN`"
+            },
+            "is_stale": {
+              "a": true,
+              "h": "Is Stale",
+              "n": "is_stale",
+              "r": true,
+              "sh": "True when not seen in the last 7 days.",
+              "t": "`$BOOLEAN`"
+            },
+            "last_seen_at": {
+              "a": true,
+              "h": "Last Seen At",
+              "n": "last_seen_at",
+              "r": true,
+              "sh": "When the price was last seen on the vendor's site.",
+              "t": "`$ANY`"
+            },
+            "peptide": {
+              "a": true,
+              "h": "Peptide",
+              "n": "peptide",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "price": {
+              "a": true,
+              "h": "Price",
+              "n": "price",
+              "r": true,
+              "sh": "Decimal amount as a string, never a float.",
+              "t": "`$STRING`"
+            },
+            "price_changed_at": {
+              "a": true,
+              "h": "Price Changed At",
+              "n": "price_changed_at",
+              "r": true,
+              "t": "`$ANY`"
+            },
+            "price_per_mg": {
+              "a": true,
+              "h": "Price Per Mg",
+              "n": "price_per_mg",
+              "r": true,
+              "t": "`$ANY`"
+            },
+            "price_per_unit": {
+              "a": true,
+              "h": "Price Per Unit",
+              "n": "price_per_unit",
+              "r": true,
+              "t": "`$ANY`"
+            },
+            "product_id": {
+              "a": true,
+              "h": "Product Id",
+              "n": "product_id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "product_name": {
+              "a": true,
+              "h": "Product Name",
+              "n": "product_name",
+              "r": true,
+              "sh": "As the vendor lists it.",
+              "t": "`$STRING`"
+            },
+            "product_page_url": {
+              "a": true,
+              "h": "Product Page Url",
+              "n": "product_page_url",
+              "r": true,
+              "sh": "Peptide Library redirect to the vendor's page; logs the click.",
+              "t": "`$STRING`"
+            },
+            "product_type": {
+              "a": true,
+              "h": "Product Type",
+              "n": "product_type",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "regular_price": {
+              "a": true,
+              "h": "Regular Price",
+              "n": "regular_price",
+              "r": true,
+              "t": "`$ANY`"
+            },
+            "ships_to": {
+              "a": true,
+              "h": "Ships To",
+              "n": "ships_to",
+              "r": true,
+              "sh": "Shipping to the `ships_to` destination you asked about; null when you didn't ask.",
+              "t": "`$ANY`"
+            },
+            "strength": {
+              "a": true,
+              "h": "Strength",
+              "n": "strength",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "vendor": {
+              "a": true,
+              "h": "Vendor",
+              "n": "vendor",
+              "r": true,
+              "t": "`$OBJECT`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "price",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /prices",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "peptides",
+                        "k": "query",
+                        "n": "category",
+                        "or": "category",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "USD",
+                        "k": "query",
+                        "n": "currency",
+                        "or": "currency",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "cursor",
+                        "or": "cursor",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "id,product_id,product_name",
+                        "k": "query",
+                        "n": "field",
+                        "or": "fields",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "vial",
+                        "k": "query",
+                        "n": "form",
+                        "or": "form",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "in_stock",
+                        "or": "in_stock",
+                        "r": false,
+                        "t": "`$BOOLEAN`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "bpc-157",
+                        "k": "query",
+                        "n": "peptide",
+                        "or": "peptide",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "price_max",
+                        "or": "price_max",
+                        "r": false,
+                        "t": "`$NUMBER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "price_min",
+                        "or": "price_min",
+                        "r": false,
+                        "t": "`$NUMBER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "product",
+                        "or": "product",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "search",
+                        "or": "search",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "US",
+                        "k": "query",
+                        "n": "ships_to",
+                        "or": "ships_to",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "sort",
+                        "or": "sort",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "strength_max_mg",
+                        "or": "strength_max_mg",
+                        "r": false,
+                        "t": "`$NUMBER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "strength_min_mg",
+                        "or": "strength_min_mg",
+                        "r": false,
+                        "t": "`$NUMBER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "vendor",
+                        "or": "vendor",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/prices",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "prices"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /prices/compare",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "currency",
+                        "or": "currency",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "form",
+                        "or": "form",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "in_stock",
+                        "or": "in_stock",
+                        "r": false,
+                        "t": "`$BOOLEAN`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "bpc-157",
+                        "k": "query",
+                        "n": "peptide",
+                        "or": "peptide",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "US",
+                        "k": "query",
+                        "n": "ships_to",
+                        "or": "ships_to",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/prices/compare",
+                  "q": {
+                    "$action": "compare",
+                    "exist": [
+                      "peptide"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "prices"
+                    },
+                    {
+                      "lit": "compare"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "product": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "api_url": {
+              "a": true,
+              "h": "Api Url",
+              "n": "api_url",
+              "r": true,
+              "sh": "Absolute URL.",
+              "t": "`$STRING`"
+            },
+            "form": {
+              "a": true,
+              "h": "Form",
+              "n": "form",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "sh": "Compound and form, e.g.",
+              "t": "`$STRING`"
+            },
+            "in_stock_count": {
+              "a": true,
+              "h": "In Stock Count",
+              "n": "in_stock_count",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "last_seen_at": {
+              "a": true,
+              "h": "Last Seen At",
+              "n": "last_seen_at",
+              "r": true,
+              "t": "`$ANY`"
+            },
+            "offer_count": {
+              "a": true,
+              "h": "Offer Count",
+              "n": "offer_count",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "offers": {
+              "a": true,
+              "h": "Offers",
+              "n": "offers",
+              "r": true,
+              "sh": "With the `pricing:read` scope; otherwise null.",
+              "t": "`$ANY`"
+            },
+            "peptide": {
+              "a": true,
+              "h": "Peptide",
+              "n": "peptide",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "prices": {
+              "a": true,
+              "h": "Prices",
+              "n": "prices",
+              "r": true,
+              "sh": "Per currency, never converted or mixed.",
+              "t": "`$ARRAY`"
+            },
+            "product_type": {
+              "a": true,
+              "h": "Product Type",
+              "n": "product_type",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "vendor_count": {
+              "a": true,
+              "h": "Vendor Count",
+              "n": "vendor_count",
+              "r": true,
+              "t": "`$INTEGER`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "product",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /products",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "peptides",
+                        "k": "query",
+                        "n": "category",
+                        "or": "category",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "cursor",
+                        "or": "cursor",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "id,peptide,form",
+                        "k": "query",
+                        "n": "field",
+                        "or": "fields",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "vial",
+                        "k": "query",
+                        "n": "form",
+                        "or": "form",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "in_stock",
+                        "or": "in_stock",
+                        "r": false,
+                        "t": "`$BOOLEAN`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "bpc-157",
+                        "k": "query",
+                        "n": "peptide",
+                        "or": "peptide",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "search",
+                        "or": "search",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "US",
+                        "k": "query",
+                        "n": "ships_to",
+                        "or": "ships_to",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "sort",
+                        "or": "sort",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "vendor",
+                        "or": "vendor",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/products",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "products"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /products/{id}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "bpc-157::vial",
+                        "k": "param",
+                        "n": "id",
+                        "or": "id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "US",
+                        "k": "query",
+                        "n": "ships_to",
+                        "or": "ships_to",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/products/{id}",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "products"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "research": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "also_known_as": {
+              "a": true,
+              "h": "Also Known As",
+              "n": "also_known_as",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "api_url": {
+              "a": true,
+              "h": "Api Url",
+              "n": "api_url",
+              "r": true,
+              "sh": "Absolute URL.",
+              "t": "`$STRING`"
+            },
+            "approved_medicine": {
+              "a": true,
+              "h": "Approved Medicine",
+              "n": "approved_medicine",
+              "r": true,
+              "sh": "True only when the recorded FDA status is Approved.",
+              "t": "`$BOOLEAN`"
+            },
+            "availability": {
+              "a": true,
+              "h": "Availability",
+              "n": "availability",
+              "r": true,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "categories": {
+              "a": true,
+              "h": "Categories",
+              "n": "categories",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "classification": {
+              "a": true,
+              "h": "Classification",
+              "n": "classification",
+              "r": true,
+              "t": "`$OBJECT`",
+              "union": {
+                "branches": 2,
+                "count": 4,
+                "depth": 2
+              }
+            },
+            "clinical_evidence": {
+              "a": true,
+              "h": "Clinical Evidence",
+              "n": "clinical_evidence",
+              "r": true,
+              "t": "`$OBJECT`",
+              "union": {
+                "branches": 2,
+                "count": 9,
+                "depth": 5
+              }
+            },
+            "conflict": {
+              "a": true,
+              "h": "Conflict",
+              "n": "conflict",
+              "r": true,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "content": {
+              "a": true,
+              "h": "Content",
+              "n": "content",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "content_reviewed_at": {
+              "a": true,
+              "h": "Content Reviewed At",
+              "n": "content_reviewed_at",
+              "r": true,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "content_total": {
+              "a": true,
+              "h": "Content Total",
+              "n": "content_total",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "description": {
+              "a": true,
+              "h": "Description",
+              "n": "description",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "development_stage": {
+              "a": true,
+              "h": "Development Stage",
+              "n": "development_stage",
+              "r": true,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "evidence": {
+              "a": true,
+              "h": "Evidence",
+              "n": "evidence",
+              "r": true,
+              "t": "`$OBJECT`",
+              "union": {
+                "branches": 2,
+                "count": 16,
+                "depth": 5
+              }
+            },
+            "fda_status": {
+              "a": true,
+              "h": "Fda Status",
+              "n": "fda_status",
+              "r": true,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "label": {
+              "a": true,
+              "h": "Label",
+              "n": "label",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "last_reviewed": {
+              "a": true,
+              "h": "Last Reviewed",
+              "n": "last_reviewed",
+              "r": true,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "library_classification": {
+              "a": true,
+              "h": "Library Classification",
+              "n": "library_classification",
+              "r": true,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "limitations": {
+              "a": true,
+              "h": "Limitations",
+              "n": "limitations",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "links": {
+              "a": true,
+              "h": "Links",
+              "n": "links",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "mechanism": {
+              "a": true,
+              "h": "Mechanism",
+              "n": "mechanism",
+              "r": true,
+              "t": "`$OBJECT`",
+              "union": {
+                "branches": 2,
+                "count": 2,
+                "depth": 2
+              }
+            },
+            "mechanisms": {
+              "a": true,
+              "h": "Mechanisms",
+              "n": "mechanisms",
+              "r": true,
+              "t": "`$OBJECT`",
+              "union": {
+                "branches": 2,
+                "count": 3,
+                "depth": 2
+              }
+            },
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "note": {
+              "a": true,
+              "h": "Note",
+              "n": "note",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "notes": {
+              "a": true,
+              "h": "Notes",
+              "n": "notes",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "peptide": {
+              "a": true,
+              "h": "Peptide",
+              "n": "peptide",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "peptide_count": {
+              "a": true,
+              "h": "Peptide Count",
+              "n": "peptide_count",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "peptide_total": {
+              "a": true,
+              "h": "Peptide Total",
+              "n": "peptide_total",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "peptides": {
+              "a": true,
+              "h": "Peptides",
+              "n": "peptides",
+              "r": true,
+              "t": "`$ARRAY`",
+              "union": {
+                "branches": 2,
+                "count": 6,
+                "depth": 5
+              }
+            },
+            "preclinical_evidence": {
+              "a": true,
+              "h": "Preclinical Evidence",
+              "n": "preclinical_evidence",
+              "r": true,
+              "t": "`$OBJECT`",
+              "union": {
+                "branches": 2,
+                "count": 7,
+                "depth": 5
+              }
+            },
+            "properties": {
+              "a": true,
+              "h": "Properties",
+              "n": "properties",
+              "r": true,
+              "t": "`$OBJECT`",
+              "union": {
+                "branches": 2,
+                "count": 6,
+                "depth": 2
+              }
+            },
+            "query": {
+              "a": true,
+              "h": "Query",
+              "n": "query",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "references": {
+              "a": true,
+              "h": "References",
+              "n": "references",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "regulatory": {
+              "a": true,
+              "h": "Regulatory",
+              "n": "regulatory",
+              "r": true,
+              "t": "`$OBJECT`",
+              "union": {
+                "branches": 2,
+                "count": 5,
+                "depth": 2
+              }
+            },
+            "regulatory_evidence": {
+              "a": true,
+              "h": "Regulatory Evidence",
+              "n": "regulatory_evidence",
+              "r": true,
+              "t": "`$ARRAY`",
+              "union": {
+                "branches": 2,
+                "count": 6,
+                "depth": 3
+              }
+            },
+            "regulatory_status": {
+              "a": true,
+              "h": "Regulatory Status",
+              "n": "regulatory_status",
+              "r": true,
+              "sh": "Regulatory class read from the profile's FDA status.",
+              "t": "`$STRING`"
+            },
+            "regulatory_status_label": {
+              "a": true,
+              "h": "Regulatory Status Label",
+              "n": "regulatory_status_label",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "research_areas": {
+              "a": true,
+              "h": "Research Areas",
+              "n": "research_areas",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "research_gaps": {
+              "a": true,
+              "h": "Research Gaps",
+              "n": "research_gaps",
+              "r": true,
+              "sh": "Evidence steps with no documented source in the profile.",
+              "t": "`$ARRAY`"
+            },
+            "research_topics": {
+              "a": true,
+              "h": "Research Topics",
+              "n": "research_topics",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "review": {
+              "a": true,
+              "h": "Review",
+              "n": "review",
+              "r": true,
+              "t": "`$OBJECT`",
+              "union": {
+                "branches": 2,
+                "count": 3,
+                "depth": 2
+              }
+            },
+            "safety": {
+              "a": true,
+              "h": "Safety",
+              "n": "safety",
+              "r": true,
+              "t": "`$OBJECT`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 2
+              }
+            },
+            "secondary_reports": {
+              "a": true,
+              "h": "Secondary Reports",
+              "n": "secondary_reports",
+              "r": true,
+              "t": "`$OBJECT`",
+              "union": {
+                "branches": 2,
+                "count": 7,
+                "depth": 5
+              }
+            },
+            "statement": {
+              "a": true,
+              "h": "Statement",
+              "n": "statement",
+              "r": true,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "summary": {
+              "a": true,
+              "h": "Summary",
+              "n": "summary",
+              "r": true,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "unavailable_sources": {
+              "a": true,
+              "h": "Unavailable Sources",
+              "n": "unavailable_sources",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "url": {
+              "a": true,
+              "h": "Url",
+              "n": "url",
+              "r": true,
+              "sh": "Absolute URL.",
+              "t": "`$STRING`"
+            },
+            "wada_status": {
+              "a": true,
+              "h": "Wada Status",
+              "n": "wada_status",
+              "r": true,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "research",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /categories",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/categories",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "categories"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /peptides",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "category",
+                        "or": "category",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "cursor",
+                        "or": "cursor",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "evidence_level",
+                        "or": "evidence_level",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "id,name,also_known_as",
+                        "k": "query",
+                        "n": "field",
+                        "or": "fields",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "regulatory_status",
+                        "or": "regulatory_status",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "research_area",
+                        "or": "research_area",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "bpc",
+                        "k": "query",
+                        "n": "search",
+                        "or": "search",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "sort",
+                        "or": "sort",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/peptides",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "peptides"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /research-areas",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "cursor",
+                        "or": "cursor",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "search",
+                        "or": "search",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/research-areas",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "research-areas"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /search",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": 10,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "glp-1",
+                        "k": "query",
+                        "n": "q",
+                        "or": "q",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "type",
+                        "or": "types",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/search",
+                  "q": {
+                    "exist": [
+                      "q"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "search"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /peptides/{slug}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "bpc-157",
+                        "k": "param",
+                        "n": "slug",
+                        "or": "slug",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/peptides/{slug}",
+                  "q": {
+                    "exist": [
+                      "slug"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "peptides"
+                    },
+                    {
+                      "var": "slug"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /peptides/{slug}/research",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "bpc-157",
+                        "k": "param",
+                        "n": "slug",
+                        "or": "slug",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/peptides/{slug}/research",
+                  "q": {
+                    "exist": [
+                      "slug"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "peptides"
+                    },
+                    {
+                      "var": "slug"
+                    },
+                    {
+                      "lit": "research"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /regulatory-status/{slug}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "bpc-157",
+                        "k": "param",
+                        "n": "slug",
+                        "or": "slug",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/regulatory-status/{slug}",
+                  "q": {
+                    "exist": [
+                      "slug"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "regulatory-status"
+                    },
+                    {
+                      "var": "slug"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "research_statistic": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "by_year": {
+              "a": true,
+              "h": "By Year",
+              "n": "by_year",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "categories": {
+              "a": true,
+              "h": "Categories",
+              "n": "categories",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "chart_url": {
+              "a": true,
+              "h": "Chart Url",
+              "n": "chart_url",
+              "r": true,
+              "t": "`$ANY`"
+            },
+            "citation": {
+              "a": true,
+              "h": "Citation",
+              "n": "citation",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "columns": {
+              "a": true,
+              "h": "Columns",
+              "n": "columns",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "definition": {
+              "a": true,
+              "h": "Definition",
+              "n": "definition",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "denominator": {
+              "a": true,
+              "h": "Denominator",
+              "n": "denominator",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$NUMBER`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "denominator_definition": {
+              "a": true,
+              "h": "Denominator Definition",
+              "n": "denominator_definition",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "description": {
+              "a": true,
+              "h": "Description",
+              "n": "description",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "detail": {
+              "a": true,
+              "h": "Detail",
+              "n": "detail",
+              "r": true,
+              "sh": "Rankings (array of rows) or comparison detail (object); null when none.",
+              "t": "`$ANY`"
+            },
+            "doi": {
+              "a": true,
+              "h": "Doi",
+              "n": "doi",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "doi_url": {
+              "a": true,
+              "h": "Doi Url",
+              "n": "doi_url",
+              "r": true,
+              "t": "`$ANY`"
+            },
+            "embed_url": {
+              "a": true,
+              "h": "Embed Url",
+              "n": "embed_url",
+              "r": true,
+              "sh": "Absolute URL.",
+              "t": "`$STRING`"
+            },
+            "evidence_class": {
+              "a": true,
+              "h": "Evidence Class",
+              "n": "evidence_class",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "filters": {
+              "a": true,
+              "h": "Filters",
+              "n": "filters",
+              "r": true,
+              "t": "`$OBJECT`",
+              "union": {
+                "branches": 4,
+                "count": 1,
+                "depth": 1
+              }
+            },
+            "first_pub_date": {
+              "a": true,
+              "h": "First Pub Date",
+              "n": "first_pub_date",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "flags": {
+              "a": true,
+              "h": "Flags",
+              "n": "flags",
+              "r": true,
+              "sh": "Caveats: partial_year, small_baseline, high_unclassified, whole_months_only, no_denominator.",
+              "t": "`$ARRAY`"
+            },
+            "groups": {
+              "a": true,
+              "h": "Groups",
+              "n": "groups",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "how_to_read": {
+              "a": true,
+              "h": "How To Read",
+              "n": "how_to_read",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "sh": "`pmid-` + the PubMed id.",
+              "t": "`$STRING`"
+            },
+            "is_peptide": {
+              "a": true,
+              "h": "Is Peptide",
+              "n": "is_peptide",
+              "r": true,
+              "t": "`$BOOLEAN`"
+            },
+            "journal": {
+              "a": true,
+              "h": "Journal",
+              "n": "journal",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "key_publications": {
+              "a": true,
+              "h": "Key Publications",
+              "n": "key_publications",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "kind": {
+              "a": true,
+              "h": "Kind",
+              "n": "kind",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "label": {
+              "a": true,
+              "h": "Label",
+              "n": "label",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "license": {
+              "a": true,
+              "h": "License",
+              "n": "license",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "limitations": {
+              "a": true,
+              "h": "Limitations",
+              "n": "limitations",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "mesh_roots": {
+              "a": true,
+              "h": "Mesh Roots",
+              "n": "mesh_roots",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "methodology_url": {
+              "a": true,
+              "h": "Methodology Url",
+              "n": "methodology_url",
+              "r": true,
+              "sh": "Absolute URL.",
+              "t": "`$STRING`"
+            },
+            "metric": {
+              "a": true,
+              "h": "Metric",
+              "n": "metric",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "min_baseline": {
+              "a": true,
+              "h": "Min Baseline",
+              "n": "min_baseline",
+              "r": true,
+              "t": "`$ANY`"
+            },
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "numerator": {
+              "a": true,
+              "h": "Numerator",
+              "n": "numerator",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$NUMBER`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "numerator_definition": {
+              "a": true,
+              "h": "Numerator Definition",
+              "n": "numerator_definition",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "open_access": {
+              "a": true,
+              "h": "Open Access",
+              "n": "open_access",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$BOOLEAN`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "origin": {
+              "a": true,
+              "h": "Origin",
+              "n": "origin",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "partial_year": {
+              "a": true,
+              "h": "Partial Year",
+              "n": "partial_year",
+              "r": true,
+              "sh": "The cutoff year, which is incomplete.",
+              "t": "`$INTEGER`"
+            },
+            "peptide": {
+              "a": true,
+              "h": "Peptide",
+              "n": "peptide",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "peptide_ids": {
+              "a": true,
+              "h": "Peptide Ids",
+              "n": "peptide_ids",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "permalink": {
+              "a": true,
+              "h": "Permalink",
+              "n": "permalink",
+              "r": true,
+              "sh": "Absolute URL.",
+              "t": "`$STRING`"
+            },
+            "pmid": {
+              "a": true,
+              "h": "Pmid",
+              "n": "pmid",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "png_url": {
+              "a": true,
+              "h": "Png Url",
+              "n": "png_url",
+              "r": true,
+              "sh": "Absolute URL.",
+              "t": "`$STRING`"
+            },
+            "publications": {
+              "a": true,
+              "h": "Publications",
+              "n": "publications",
+              "r": true,
+              "t": "`$ANY`"
+            },
+            "published_at": {
+              "a": true,
+              "h": "Published At",
+              "n": "published_at",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "pubmed_url": {
+              "a": true,
+              "h": "Pubmed Url",
+              "n": "pubmed_url",
+              "r": true,
+              "sh": "Absolute URL.",
+              "t": "`$STRING`"
+            },
+            "query": {
+              "a": true,
+              "h": "Query",
+              "n": "query",
+              "r": true,
+              "sh": "The exact Europe PMC query behind the counts.",
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "regulatory": {
+              "a": true,
+              "h": "Regulatory",
+              "n": "regulatory",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "research_url": {
+              "a": true,
+              "h": "Research Url",
+              "n": "research_url",
+              "r": true,
+              "sh": "Absolute URL.",
+              "t": "`$STRING`"
+            },
+            "rows": {
+              "a": true,
+              "h": "Rows",
+              "n": "rows",
+              "r": true,
+              "t": "`$ARRAY`",
+              "union": {
+                "branches": 4,
+                "count": 1,
+                "depth": 2
+              }
+            },
+            "section": {
+              "a": true,
+              "h": "Section",
+              "n": "section",
+              "r": true,
+              "sh": "State of Peptide Research section that uses it.",
+              "t": "`$INTEGER`"
+            },
+            "slug": {
+              "a": true,
+              "h": "Slug",
+              "n": "slug",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "snapshot": {
+              "a": true,
+              "h": "Snapshot",
+              "n": "snapshot",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "source": {
+              "a": true,
+              "h": "Source",
+              "n": "source",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "study_type": {
+              "a": true,
+              "h": "Study Type",
+              "n": "study_type",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "study_types": {
+              "a": true,
+              "h": "Study Types",
+              "n": "study_types",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "subtitle": {
+              "a": true,
+              "h": "Subtitle",
+              "n": "subtitle",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "svg_url": {
+              "a": true,
+              "h": "Svg Url",
+              "n": "svg_url",
+              "r": true,
+              "sh": "Absolute URL.",
+              "t": "`$STRING`"
+            },
+            "tier": {
+              "a": true,
+              "h": "Tier",
+              "n": "tier",
+              "r": true,
+              "sh": "`counts_only`: yearly counts only (a very large, general literature); `excluded`: a blend or comparison entry.",
+              "t": "`$STRING`"
+            },
+            "tier_reason": {
+              "a": true,
+              "h": "Tier Reason",
+              "n": "tier_reason",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "title": {
+              "a": true,
+              "h": "Title",
+              "n": "title",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "totals": {
+              "a": true,
+              "h": "Totals",
+              "n": "totals",
+              "r": true,
+              "t": "`$ANY`"
+            },
+            "trials": {
+              "a": true,
+              "h": "Trials",
+              "n": "trials",
+              "r": true,
+              "t": "`$ANY`"
+            },
+            "unit": {
+              "a": true,
+              "h": "Unit",
+              "n": "unit",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "url": {
+              "a": true,
+              "h": "Url",
+              "n": "url",
+              "r": true,
+              "sh": "Absolute URL.",
+              "t": "`$STRING`"
+            },
+            "value": {
+              "a": true,
+              "h": "Value",
+              "n": "value",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$NUMBER`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "version": {
+              "a": true,
+              "h": "Version",
+              "n": "version",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "versions": {
+              "a": true,
+              "h": "Versions",
+              "n": "versions",
+              "r": true,
+              "t": "`$ARRAY`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "research_statistic",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /research/categories",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "latest",
+                        "k": "query",
+                        "n": "version",
+                        "or": "version",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/research/categories",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "research"
+                    },
+                    {
+                      "lit": "categories"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /research/datasets",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/research/datasets",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "research"
+                    },
+                    {
+                      "lit": "datasets"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /research/publications",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "category",
+                        "or": "category",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "cursor",
+                        "or": "cursor",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "evidence_class",
+                        "or": "evidence_class",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "id,pmid,doi",
+                        "k": "query",
+                        "n": "field",
+                        "or": "fields",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "glp1",
+                        "k": "query",
+                        "n": "group",
+                        "or": "group",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 25,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "semaglutide",
+                        "k": "query",
+                        "n": "peptide",
+                        "or": "peptide",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "regulatory",
+                        "or": "regulatory",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "search",
+                        "or": "search",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "study_type",
+                        "or": "study_type",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "latest",
+                        "k": "query",
+                        "n": "version",
+                        "or": "version",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "year",
+                        "or": "year",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/research/publications",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "research"
+                    },
+                    {
+                      "lit": "publications"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /research/reports",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/research/reports",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "research"
+                    },
+                    {
+                      "lit": "reports"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /research/statistics",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "cursor",
+                        "or": "cursor",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 50,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "section",
+                        "or": "section",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "latest",
+                        "k": "query",
+                        "n": "version",
+                        "or": "version",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/research/statistics",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "research"
+                    },
+                    {
+                      "lit": "statistics"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /research/charts/{id}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "publications-by-year",
+                        "k": "param",
+                        "n": "id",
+                        "or": "id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "latest",
+                        "k": "query",
+                        "n": "version",
+                        "or": "version",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/research/charts/{id}",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "research"
+                    },
+                    {
+                      "lit": "charts"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /research/statistics/{id}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "total_publications",
+                        "k": "param",
+                        "n": "id",
+                        "or": "id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "latest",
+                        "k": "query",
+                        "n": "version",
+                        "or": "version",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/research/statistics/{id}",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "research"
+                    },
+                    {
+                      "lit": "statistics"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /research/trends",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "category",
+                        "or": "category",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "evidence_class",
+                        "or": "evidence_class",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "from_year",
+                        "or": "from_year",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "glp1",
+                        "k": "query",
+                        "n": "group",
+                        "or": "group",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "publications_by_year",
+                        "k": "query",
+                        "n": "metric",
+                        "or": "metric",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "semaglutide",
+                        "k": "query",
+                        "n": "peptide",
+                        "or": "peptide",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "regulatory",
+                        "or": "regulatory",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "study_type",
+                        "or": "study_type",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "to_year",
+                        "or": "to_year",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "latest",
+                        "k": "query",
+                        "n": "version",
+                        "or": "version",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/research/trends",
+                  "q": {
+                    "exist": [
+                      "metric"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "research"
+                    },
+                    {
+                      "lit": "trends"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /research/peptides/{slug}/statistics",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "bpc-157",
+                        "k": "param",
+                        "n": "slug",
+                        "or": "slug",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "latest",
+                        "k": "query",
+                        "n": "version",
+                        "or": "version",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/research/peptides/{slug}/statistics",
+                  "q": {
+                    "exist": [
+                      "slug"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "research"
+                    },
+                    {
+                      "lit": "peptides"
+                    },
+                    {
+                      "var": "slug"
+                    },
+                    {
+                      "lit": "statistics"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "study": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "analog_compound": {
+              "a": true,
+              "h": "Analog Compound",
+              "n": "analog_compound",
+              "r": true,
+              "sh": "Research on a related compound, not this one.",
+              "t": "`$BOOLEAN`"
+            },
+            "authors": {
+              "a": true,
+              "h": "Authors",
+              "n": "authors",
+              "r": true,
+              "sh": "Not stored by Peptide Library.",
+              "t": "`$STRING`"
+            },
+            "citations": {
+              "a": true,
+              "h": "Citations",
+              "n": "citations",
+              "r": true,
+              "t": "`$ARRAY`",
+              "union": {
+                "branches": 2,
+                "count": 3,
+                "depth": 3
+              }
+            },
+            "cited_by": {
+              "a": true,
+              "h": "Cited By",
+              "n": "cited_by",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "doi": {
+              "a": true,
+              "h": "Doi",
+              "n": "doi",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "evidence_classification": {
+              "a": true,
+              "h": "Evidence Classification",
+              "n": "evidence_classification",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "evidence_classification_label": {
+              "a": true,
+              "h": "Evidence Classification Label",
+              "n": "evidence_classification_label",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "sh": "Stable id from the study's identifier (`pmid-…`, `doi-…`, `nct-…`); null when it has none.",
+              "t": "`$STRING`"
+            },
+            "journal": {
+              "a": true,
+              "h": "Journal",
+              "n": "journal",
+              "r": true,
+              "sh": "Not stored by Peptide Library.",
+              "t": "`$STRING`"
+            },
+            "limitations": {
+              "a": true,
+              "h": "Limitations",
+              "n": "limitations",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "nct_id": {
+              "a": true,
+              "h": "Nct Id",
+              "n": "nct_id",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "pmid": {
+              "a": true,
+              "h": "Pmid",
+              "n": "pmid",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "population": {
+              "a": true,
+              "h": "Population",
+              "n": "population",
+              "r": true,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "publication_year": {
+              "a": true,
+              "h": "Publication Year",
+              "n": "publication_year",
+              "r": true,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "research_model": {
+              "a": true,
+              "h": "Research Model",
+              "n": "research_model",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "sample_size": {
+              "a": true,
+              "h": "Sample Size",
+              "n": "sample_size",
+              "r": true,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "source_url": {
+              "a": true,
+              "h": "Source Url",
+              "n": "source_url",
+              "r": true,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "study_type": {
+              "a": true,
+              "h": "Study Type",
+              "n": "study_type",
+              "r": true,
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "summary": {
+              "a": true,
+              "h": "Summary",
+              "n": "summary",
+              "r": true,
+              "sh": "The finding as summarised by Peptide Library editors (dose figures removed).",
+              "t": "`$ANY`",
+              "union": {
+                "branches": 2,
+                "count": 1,
+                "depth": 0
+              }
+            },
+            "title": {
+              "a": true,
+              "h": "Title",
+              "n": "title",
+              "r": true,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "study",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /peptides/{slug}/studies",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "bpc-157",
+                        "k": "param",
+                        "n": "slug",
+                        "or": "slug",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/peptides/{slug}/studies",
+                  "q": {
+                    "exist": [
+                      "slug"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "peptides"
+                    },
+                    {
+                      "var": "slug"
+                    },
+                    {
+                      "lit": "studies"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /studies",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "cursor",
+                        "or": "cursor",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "human_controlled_trial",
+                        "k": "query",
+                        "n": "evidence_classification",
+                        "or": "evidence_classification",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "id,title,publication_year",
+                        "k": "query",
+                        "n": "field",
+                        "or": "fields",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "semaglutide",
+                        "k": "query",
+                        "n": "peptide",
+                        "or": "peptide",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "search",
+                        "or": "search",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "sort",
+                        "or": "sort",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "year_from",
+                        "or": "year_from",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "year_to",
+                        "or": "year_to",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/studies",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "studies"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /studies/{id}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "pmid-33567185",
+                        "k": "param",
+                        "n": "id",
+                        "or": "id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/studies/{id}",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "studies"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "vendor": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "about": {
+              "a": true,
+              "h": "About",
+              "n": "about",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "api_url": {
+              "a": true,
+              "h": "Api Url",
+              "n": "api_url",
+              "r": true,
+              "sh": "Absolute URL.",
+              "t": "`$STRING`"
+            },
+            "catalog": {
+              "a": true,
+              "h": "Catalog",
+              "n": "catalog",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "country": {
+              "a": true,
+              "h": "Country",
+              "n": "country",
+              "r": true,
+              "t": "`$ANY`"
+            },
+            "description": {
+              "a": true,
+              "h": "Description",
+              "n": "description",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "sh": "Stable vendor id.",
+              "t": "`$STRING`"
+            },
+            "logo_url": {
+              "a": true,
+              "h": "Logo Url",
+              "n": "logo_url",
+              "r": true,
+              "t": "`$ANY`"
+            },
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "product_categories": {
+              "a": true,
+              "h": "Product Categories",
+              "n": "product_categories",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "profile_url": {
+              "a": true,
+              "h": "Profile Url",
+              "n": "profile_url",
+              "r": true,
+              "sh": "Absolute URL.",
+              "t": "`$STRING`"
+            },
+            "rating": {
+              "a": true,
+              "h": "Rating",
+              "n": "rating",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "region": {
+              "a": true,
+              "h": "Region",
+              "n": "region",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "reviews": {
+              "a": true,
+              "h": "Reviews",
+              "n": "reviews",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "shipping": {
+              "a": true,
+              "h": "Shipping",
+              "n": "shipping",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "slug": {
+              "a": true,
+              "h": "Slug",
+              "n": "slug",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "sources": {
+              "a": true,
+              "h": "Sources",
+              "n": "sources",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "website_url": {
+              "a": true,
+              "h": "Website Url",
+              "n": "website_url",
+              "r": true,
+              "sh": "Peptide Library link to the vendor's site (may be an affiliate link).",
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "vendor",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /vendors/{id}/prices",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "8",
+                        "k": "param",
+                        "n": "id",
+                        "or": "id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "peptides",
+                        "k": "query",
+                        "n": "category",
+                        "or": "category",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "USD",
+                        "k": "query",
+                        "n": "currency",
+                        "or": "currency",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "cursor",
+                        "or": "cursor",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "id,product_id,product_name",
+                        "k": "query",
+                        "n": "field",
+                        "or": "fields",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "vial",
+                        "k": "query",
+                        "n": "form",
+                        "or": "form",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "in_stock",
+                        "or": "in_stock",
+                        "r": false,
+                        "t": "`$BOOLEAN`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "bpc-157",
+                        "k": "query",
+                        "n": "peptide",
+                        "or": "peptide",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "price_max",
+                        "or": "price_max",
+                        "r": false,
+                        "t": "`$NUMBER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "price_min",
+                        "or": "price_min",
+                        "r": false,
+                        "t": "`$NUMBER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "product",
+                        "or": "product",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "search",
+                        "or": "search",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "US",
+                        "k": "query",
+                        "n": "ships_to",
+                        "or": "ships_to",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "sort",
+                        "or": "sort",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "strength_max_mg",
+                        "or": "strength_max_mg",
+                        "r": false,
+                        "t": "`$NUMBER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "strength_min_mg",
+                        "or": "strength_min_mg",
+                        "r": false,
+                        "t": "`$NUMBER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/vendors/{id}/prices",
+                  "q": {
+                    "$action": "price",
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "vendors"
+                    },
+                    {
+                      "var": "id"
+                    },
+                    {
+                      "lit": "prices"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /vendors/{id}/products",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "8",
+                        "k": "param",
+                        "n": "id",
+                        "or": "id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "peptides",
+                        "k": "query",
+                        "n": "category",
+                        "or": "category",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "cursor",
+                        "or": "cursor",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "id,peptide,form",
+                        "k": "query",
+                        "n": "field",
+                        "or": "fields",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "vial",
+                        "k": "query",
+                        "n": "form",
+                        "or": "form",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "in_stock",
+                        "or": "in_stock",
+                        "r": false,
+                        "t": "`$BOOLEAN`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "bpc-157",
+                        "k": "query",
+                        "n": "peptide",
+                        "or": "peptide",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "search",
+                        "or": "search",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "US",
+                        "k": "query",
+                        "n": "ships_to",
+                        "or": "ships_to",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "sort",
+                        "or": "sort",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/vendors/{id}/products",
+                  "q": {
+                    "$action": "product",
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "vendors"
+                    },
+                    {
+                      "var": "id"
+                    },
+                    {
+                      "lit": "products"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /vendors",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "US",
+                        "k": "query",
+                        "n": "country",
+                        "or": "country",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "cursor",
+                        "or": "cursor",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "id,slug,name",
+                        "k": "query",
+                        "n": "field",
+                        "or": "fields",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "min_rating",
+                        "or": "min_rating",
+                        "r": false,
+                        "t": "`$NUMBER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "peptide",
+                        "or": "peptide",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "product_category",
+                        "or": "product_category",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "search",
+                        "or": "search",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "US",
+                        "k": "query",
+                        "n": "ships_to",
+                        "or": "ships_to",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "sort",
+                        "or": "sort",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/vendors",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "vendors"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /vendors/{id}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "8",
+                        "k": "param",
+                        "n": "id",
+                        "or": "id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "US",
+                        "k": "query",
+                        "n": "ships_to",
+                        "or": "ships_to",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/vendors/{id}",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "vendors"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /vendors/compare",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "8,13",
+                        "k": "query",
+                        "n": "ids",
+                        "or": "ids",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "US",
+                        "k": "query",
+                        "n": "ships_to",
+                        "or": "ships_to",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/vendors/compare",
+                  "q": {
+                    "$action": "compare",
+                    "exist": [
+                      "ids"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "vendors"
+                    },
+                    {
+                      "lit": "compare"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /vendors/{id}/shipping",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "8",
+                        "k": "param",
+                        "n": "id",
+                        "or": "id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "US",
+                        "k": "query",
+                        "n": "ships_to",
+                        "or": "ships_to",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/vendors/{id}/shipping",
+                  "q": {
+                    "$action": "shipping",
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "vendors"
+                    },
+                    {
+                      "var": "id"
+                    },
+                    {
+                      "lit": "shipping"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        }
+      },
+      "feature": {
+        "ratelimit": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false,
+              "burst": 5,
+              "rate": 5
+            },
+            "optspec": {
+              "now": "`$FUNCTION`",
+              "sleep": "`$FUNCTION`"
+            },
+            "strict": false
+          },
+          "description": "Client-side rate limiting via a token bucket",
+          "hook": {
+            "GetData": {
+              "active": false,
+              "await": false
+            },
+            "GetMatch": {
+              "active": false,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": false,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": false,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PreRequest": {
+              "active": false,
+              "await": false
+            },
+            "PreResponse": {
+              "active": false,
+              "await": false
+            },
+            "PreResult": {
+              "active": false,
+              "await": false
+            },
+            "PreSpec": {
+              "active": false,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": false,
+              "await": false
+            }
+          },
+          "name": "ratelimit",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
+              "deps": {}
+            },
+            "lua": {
+              "deps": {}
+            },
+            "php": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "rb": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Rate limiting",
+          "transport": "wrap",
+          "version": "0.0.1"
+        },
+        "retry": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false,
+              "factor": 2,
+              "maxDelay": 2000,
+              "minDelay": 50,
+              "retries": 2,
+              "statuses": [
+                408,
+                425,
+                429,
+                500,
+                502,
+                503,
+                504
+              ]
+            },
+            "optspec": {
+              "jitter": "`$BOOLEAN`",
+              "sleep": "`$FUNCTION`"
+            },
+            "strict": false
+          },
+          "description": "Automatic retry of transient failures with exponential backoff",
+          "hook": {
+            "GetData": {
+              "active": false,
+              "await": false
+            },
+            "GetMatch": {
+              "active": false,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": false,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": false,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PreRequest": {
+              "active": false,
+              "await": false
+            },
+            "PreResponse": {
+              "active": false,
+              "await": false
+            },
+            "PreResult": {
+              "active": false,
+              "await": false
+            },
+            "PreSpec": {
+              "active": false,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": false,
+              "await": false
+            }
+          },
+          "name": "retry",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
+              "deps": {}
+            },
+            "lua": {
+              "deps": {}
+            },
+            "php": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "rb": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Retry",
+          "transport": "wrap",
+          "version": "0.0.1"
+        },
+        "test": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false
+            },
+            "optspec": {
+              "entity": "`$MAP`",
+              "net": "`$MAP`"
+            },
+            "strict": false
+          },
+          "description": "In-memory mock transport for testing without a live server",
+          "hook": {
+            "GetData": {
+              "active": true,
+              "await": false
+            },
+            "GetMatch": {
+              "active": true,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": true,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": true,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PrePoint": {
+              "active": true,
+              "await": false
+            },
+            "PreRequest": {
+              "active": true,
+              "await": false
+            },
+            "PreResponse": {
+              "active": true,
+              "await": false
+            },
+            "PreResult": {
+              "active": true,
+              "await": false
+            },
+            "PreSpec": {
+              "active": true,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": true,
+              "await": false
+            },
+            "SetMatch": {
+              "active": true,
+              "await": false
+            }
+          },
+          "name": "test",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
+              "deps": {}
+            },
+            "lua": {
+              "deps": {}
+            },
+            "php": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "rb": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Test transport",
+          "transport": "base",
+          "version": "0.0.1"
+        },
+        "timeout": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false,
+              "ms": 30000
+            },
+            "optspec": {
+              "clearTimer": "`$FUNCTION`",
+              "now": "`$FUNCTION`",
+              "setTimer": "`$FUNCTION`"
+            },
+            "strict": false
+          },
+          "description": "Per-request timeout with transport abort",
+          "hook": {
+            "GetData": {
+              "active": false,
+              "await": false
+            },
+            "GetMatch": {
+              "active": false,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": false,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": false,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PreRequest": {
+              "active": false,
+              "await": false
+            },
+            "PreResponse": {
+              "active": false,
+              "await": false
+            },
+            "PreResult": {
+              "active": false,
+              "await": false
+            },
+            "PreSpec": {
+              "active": false,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": false,
+              "await": false
+            }
+          },
+          "name": "timeout",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
+              "deps": {}
+            },
+            "lua": {
+              "deps": {}
+            },
+            "php": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "rb": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Timeout",
+          "transport": "wrap",
+          "version": "0.0.1"
+        }
+      },
+      "flow": {
+        "BasicGetApiIndexFlow": {
+          "active": true,
+          "entity": "get_api_index",
+          "key$": "BasicGetApiIndexFlow",
+          "kind": "basic",
+          "name": "BasicGetApiIndexFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "get_api_index_ref01",
+                "srcdatavar": "get_api_index_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {},
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-get_api_index_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicMetaFlow": {
+          "active": true,
+          "entity": "meta",
+          "key$": "BasicMetaFlow",
+          "kind": "basic",
+          "name": "BasicMetaFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "meta_ref01",
+                "srcdatavar": "meta_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {},
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-meta_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicPriceFlow": {
+          "active": true,
+          "entity": "price",
+          "key$": "BasicPriceFlow",
+          "kind": "basic",
+          "name": "BasicPriceFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "price_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "price_ref01",
+                "srcdatavar": "price_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {},
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-price_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicProductFlow": {
+          "active": true,
+          "entity": "product",
+          "key$": "BasicProductFlow",
+          "kind": "basic",
+          "name": "BasicProductFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "product_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "product_ref01",
+                "srcdatavar": "product_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "product01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-product_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicResearchFlow": {
+          "active": true,
+          "entity": "research",
+          "key$": "BasicResearchFlow",
+          "kind": "basic",
+          "name": "BasicResearchFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "research_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "research_ref01",
+                "srcdatavar": "research_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "research01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-research_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicResearchStatisticFlow": {
+          "active": true,
+          "entity": "research_statistic",
+          "key$": "BasicResearchStatisticFlow",
+          "kind": "basic",
+          "name": "BasicResearchStatisticFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "research_statistic_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "research_statistic_ref01",
+                "srcdatavar": "research_statistic_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "research_statistic01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-research_statistic_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicStudyFlow": {
+          "active": true,
+          "entity": "study",
+          "key$": "BasicStudyFlow",
+          "kind": "basic",
+          "name": "BasicStudyFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "study_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "study_ref01",
+                "srcdatavar": "study_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "study01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-study_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicVendorFlow": {
+          "active": true,
+          "entity": "vendor",
+          "key$": "BasicVendorFlow",
+          "kind": "basic",
+          "name": "BasicVendorFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "vendor_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "vendor_ref01",
+                "srcdatavar": "vendor_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "vendor01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-vendor_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "info": {
+        "contact": {
+          "email": "support@peptidelibrary.app",
+          "name": "Peptide Library developer support",
+          "url": "https://peptidelibrary.app/developers"
+        },
+        "description": "Peptide research data, scientific literature and vendor information from [Peptide Library](https://peptidelibrary.app).\n\n**Research and education only.** Research and educational information only. Not medical advice, and not a recommendation to buy or use any substance. Many of these compounds are not approved for human use. The API never returns dose figures, regimens, reconstitution or injection instructions.\n\n## Authentication\nResearch and study endpoints work without a key (limited per IP address). Vendor, product and price endpoints need an API key with the matching scope, sent as `Authorization: Bearer pl_live_…` (or `X-API-Key`). Create keys at https://peptidelibrary.app/developers/dashboard. Keep keys on your server: never put them in a browser or app bundle.\n\nScopes: `research:read`, `studies:read`, `vendors:read`, `products:read`, `pricing:read`.\n\n## Rate limits\nKeyed vendor, product and price requests count against your plan's per-minute and monthly limits (Free Developer: 60 per minute, 5,000 per month). Each response carries `RateLimit-Limit`, `RateLimit-Remaining` and `RateLimit-Reset`; over the limit you get **429** with `Retry-After`. Anonymous requests are limited per IP address.\n\n## Conventions\nJSON envelopes: `{ data, pagination?, meta }` and `{ error: { code, message, request_id } }`. Lists use cursor pagination (`limit`, `cursor` → `pagination.next_cursor`). Timestamps are UTC ISO 8601; money is a decimal string in the listed currency, never converted. Research fields a profile doesn't document are the string `not_documented`; unknown vendor and price fields are `null`. Responses carry `ETag` (send `If-None-Match` for 304) and `X-Request-Id`.\n\n## Prices and affiliate links\nPeptide Library may earn a commission when you buy through these links, at no cost to you. Commissions never affect which offers are listed or their order. Prices are as last seen on the vendor's site; check the vendor before relying on them. Offers come only from vendors whose prices Peptide Library may share, are matched to a library profile and were seen on the vendor's site in the last 30 days.",
+        "license": {
+          "name": "Peptide Library API Terms of Use",
+          "url": "https://peptidelibrary.app/developers/terms"
+        },
+        "security": {
+          "alternatives": [
+            [
+              {
+                "in": "header",
+                "name": "X-API-Key",
+                "prefix": "",
+                "scheme": "apiKeyHeader",
+                "type": "apiKey"
+              }
+            ]
+          ],
+          "in": "header",
+          "name": "Authorization",
+          "prefix": "Bearer",
+          "scheme": "bearerAuth",
+          "type": "http"
+        },
+        "servers": [
+          {
+            "description": "Production",
+            "url": "https://api.peptidelibrary.app/v1"
+          },
+          {
+            "description": "Production (same API on the website host)",
+            "url": "https://peptidelibrary.app/api/v1"
+          }
+        ],
+        "summary": "Peptide research data, scientific literature and vendor information for developers.",
+        "termsOfService": "https://peptidelibrary.app/developers/terms",
+        "title": "Peptide Library API",
+        "version": "1.1.0",
+        "website": "https://peptidelibrary.app/developers/docs",
+        "x-logo": {
+          "altText": "Peptide Library",
+          "href": "https://peptidelibrary.app",
+          "url": "https://peptidelibrary.app/icon.png"
+        }
+      },
+      "option": {},
+      "optspec": {
+        "allow": {
+          "method": "GET,PUT,POST,PATCH,DELETE,OPTIONS",
+          "op": "create,update,patch,load,list,remove,command,direct,graphql"
+        },
+        "apikey": "",
+        "auth": {
+          "basic": false,
+          "in": "",
+          "name": "",
+          "prefix": ""
+        },
+        "base": "http://localhost:8000",
+        "clean": {
+          "active": true,
+          "hint": "0",
+          "keys": "key,secret,token,password,passwd,authorization,cookie,credential,signature",
+          "mask": "[redacted]",
+          "min": "4",
+          "values": ""
+        },
+        "entity": {
+          "`$CHILD`": {
+            "`$OPEN`": true,
+            "active": false,
+            "alias": {}
+          }
+        },
+        "extend": "`$ANY`",
+        "headers": {
+          "`$CHILD`": "`$STRING`"
+        },
+        "prefix": "",
+        "secret": "",
+        "server": {
+          "`$CHILD`": ""
+        },
+        "suffix": "",
+        "system": {
+          "fetch": "`$ANY`"
+        },
+        "test": {
+          "active": false,
+          "entity": {
+            "`$OPEN`": true
+          }
+        },
+        "utility": {}
+      },
+      "phase": {
+        "build": {
+          "active": true
+        },
+        "top": {
+          "active": true
+        }
+      },
+      "publisher": {
+        "name": "",
+        "security": "",
+        "url": ""
+      },
+      "repo": {
+        "host": "github.com",
+        "path": ""
+      },
+      "target": {
+        "go": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "go",
+          "feature": {
+            "fullset": [
+              "test/feature_test.go"
+            ],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "peptide-library",
+            "package": "",
+            "path": ""
+          },
+          "name": "go",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "",
+              "package": "",
+              "state": "pending",
+              "url": "",
+              "vault": {
+                "alias": "",
+                "env": "",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/runner_test.go",
+            "test/struct_runner_test.go"
+          ],
+          "title": "Golang"
+        },
+        "go-cli": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "go",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "peptide-library",
+            "package": "",
+            "path": ""
+          },
+          "name": "go-cli",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "phase": {
+            "agentguide": {
+              "active": false
+            },
+            "entity": {
+              "active": false
+            },
+            "feature": {
+              "active": false
+            },
+            "readme": {
+              "active": false
+            },
+            "test": {
+              "active": false
+            }
+          },
+          "provides": {},
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "",
+              "package": "",
+              "state": "pending",
+              "url": "",
+              "vault": {
+                "alias": "",
+                "env": "",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "root"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [],
+          "title": "Go CLI"
+        },
+        "go-mcp": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "go",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "peptide-library",
+            "package": "",
+            "path": ""
+          },
+          "name": "go-mcp",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "phase": {
+            "agentguide": {
+              "active": false
+            },
+            "entity": {
+              "active": false
+            },
+            "feature": {
+              "active": false
+            },
+            "readme": {
+              "active": false
+            },
+            "test": {
+              "active": false
+            }
+          },
+          "provides": {},
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "",
+              "package": "",
+              "state": "pending",
+              "url": "",
+              "vault": {
+                "alias": "",
+                "env": "",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "root"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [],
+          "title": "Go MCP server",
+          "tool": {
+            "write": false
+          }
+        },
+        "lua": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "--"
+          },
+          "deps": {
+            "dkjson": {
+              "active": true,
+              "kind": "prod",
+              "version": "2.5"
+            }
+          },
+          "ext": "lua",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "peptide-library",
+            "package": "",
+            "path": ""
+          },
+          "name": "lua",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "luarocks",
+              "package": "",
+              "state": "pending",
+              "url": "https://luarocks.org",
+              "vault": {
+                "alias": "luarocks",
+                "env": "LUAROCKS_API_KEY",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.lua"
+          ],
+          "title": "Lua"
+        },
+        "php": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "php",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "peptide-library",
+            "package": "",
+            "path": ""
+          },
+          "name": "php",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "packagist",
+              "package": "",
+              "state": "pending",
+              "url": "https://packagist.org",
+              "vault": {
+                "alias": "packagist",
+                "env": "PACKAGIST_API_TOKEN",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/StructRunner.php"
+          ],
+          "title": "PHP"
+        },
+        "py": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "#"
+          },
+          "deps": {
+            "requests": {
+              "active": true,
+              "kind": "prod",
+              "version": "2.33"
+            }
+          },
+          "ext": "py",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "peptide-library",
+            "package": "",
+            "path": ""
+          },
+          "name": "py",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "pypi",
+              "package": "",
+              "state": "pending",
+              "url": "https://pypi.org",
+              "vault": {
+                "alias": "pypi",
+                "env": "",
+                "recipe": "pypi"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.py"
+          ],
+          "title": "Python"
+        },
+        "rb": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "#"
+          },
+          "deps": {
+            "json": {
+              "active": true,
+              "kind": "prod",
+              "version": "*"
+            }
+          },
+          "ext": "rb",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "peptide-library",
+            "package": "",
+            "path": ""
+          },
+          "name": "rb",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "rubygems",
+              "package": "",
+              "state": "pending",
+              "url": "https://rubygems.org",
+              "vault": {
+                "alias": "gem",
+                "env": "",
+                "recipe": "gem"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.rb"
+          ],
+          "title": "Ruby"
+        },
+        "ts": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {
+            "@types/node": {
+              "active": true,
+              "kind": "dev",
+              "version": "^25.6.0"
+            },
+            "typescript": {
+              "active": true,
+              "kind": "dev",
+              "version": "^5.9.3"
+            }
+          },
+          "ext": "ts",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "peptide-library",
+            "package": "",
+            "path": ""
+          },
+          "name": "ts",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "npm",
+              "package": "",
+              "state": "pending",
+              "url": "https://registry.npmjs.org",
+              "vault": {
+                "alias": "npm",
+                "env": "",
+                "recipe": "npm"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [
+            "test/runner.ts",
+            "test/vendor/omni/compat.ts",
+            "src/feature/secrets/sekreto/Providers.ts",
+            "src/feature/secrets/sekreto/Sigv4.ts",
+            "src/feature/secrets/sekreto/provider/Registry.ts",
+            "src/feature/secrets/sekreto/provider/http.ts"
+          ],
+          "title": "TypeScript"
+        }
+      },
+      "test": {
+        "live": {
+          "app": false,
+          "base": "",
+          "strict": true
+        }
+      },
+      "text": {
+        "about_md": "",
+        "docs_url": "",
+        "entity_desc": {},
+        "homepage": "",
+        "meta_source": "",
+        "summary": "",
+        "tagline": "",
+        "title": "",
+        "website": ""
+      }
+    }
+  },
+  "name": "peptide-library",
+  "origin": "voxgig-sdk"
+}

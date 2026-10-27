@@ -1,0 +1,55 @@
+{
+  point: "warning"
+  note: "Points GET /categories, GET /peptides and GET /research-areas on entity=research op=list have the same selector (exist: none), so only GET /categories is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "research"
+  op: "list"
+  points: [
+    "GET /categories"
+    "GET /peptides"
+    "GET /research-areas"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /peptides/{slug}, GET /peptides/{slug}/research and GET /regulatory-status/{slug} on entity=research op=load have the same selector (exist: slug), so only GET /peptides/{slug} is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "research"
+  op: "load"
+  points: [
+    "GET /peptides/{slug}"
+    "GET /peptides/{slug}/research"
+    "GET /regulatory-status/{slug}"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /research/categories, GET /research/datasets, GET /research/publications, GET /research/reports and GET /research/statistics on entity=research_statistic op=list have the same selector (exist: none), so only GET /research/categories is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "research_statistic"
+  op: "list"
+  points: [
+    "GET /research/categories"
+    "GET /research/datasets"
+    "GET /research/publications"
+    "GET /research/reports"
+    "GET /research/statistics"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /research/charts/{id} and GET /research/statistics/{id} on entity=research_statistic op=load have the same selector (exist: id), so only GET /research/charts/{id} is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "research_statistic"
+  op: "load"
+  points: [
+    "GET /research/charts/{id}"
+    "GET /research/statistics/{id}"
+  ]
+
+}

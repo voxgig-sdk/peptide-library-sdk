@@ -1,0 +1,368 @@
+-- Typed models for the PeptideLibrary SDK (LuaLS annotations).
+--
+-- GENERATED from the API model: main.kit.entity.<e>.fields{} and per-op
+-- params (op.<name>.points[].g.params[]). Field/param types come from the
+-- canonical type sentinels via @voxgig/sdkgen canonToType (source of truth:
+-- @voxgig/apidef VALID_CANON). Annotations only — no runtime effect. Do not
+-- edit by hand.
+
+---@class GetApiIndex
+---@field documentation string
+---@field endpoints table
+---@field name string
+---@field openapi string
+---@field release string
+---@field version string
+
+---@class GetApiIndexLoadMatch
+---@field documentation? string
+---@field endpoints? table
+---@field name? string
+---@field openapi? string
+---@field release? string
+---@field version? string
+
+---@class Meta
+---@field database string
+---@field release string
+---@field status string
+
+---@class MetaLoadMatch
+---@field database? string
+---@field release? string
+---@field status? string
+
+---@class Price
+---@field availability string
+---@field currency string
+---@field first_seen_at any
+---@field form string
+---@field id string
+---@field is_affiliate_link boolean
+---@field is_stale boolean
+---@field last_seen_at any
+---@field peptide table
+---@field price string
+---@field price_changed_at any
+---@field price_per_mg any
+---@field price_per_unit any
+---@field product_id string
+---@field product_name string
+---@field product_page_url string
+---@field product_type string
+---@field regular_price any
+---@field ships_to any
+---@field strength table
+---@field vendor table
+
+---@class PriceLoadMatch
+---@field currency? string
+---@field form? string
+---@field in_stock? boolean
+---@field peptide string
+---@field ships_to? string
+
+---@class PriceListMatch
+---@field category? string
+---@field currency? string
+---@field cursor? string
+---@field field? string
+---@field form? string
+---@field in_stock? boolean
+---@field limit? number
+---@field peptide? string
+---@field price_max? number
+---@field price_min? number
+---@field product? string
+---@field search? string
+---@field ships_to? string
+---@field sort? string
+---@field strength_max_mg? number
+---@field strength_min_mg? number
+---@field vendor? string
+
+---@class Product
+---@field api_url string
+---@field form string
+---@field id string
+---@field in_stock_count number
+---@field last_seen_at any
+---@field offer_count number
+---@field offers any
+---@field peptide table
+---@field prices table
+---@field product_type string
+---@field vendor_count number
+
+---@class ProductLoadMatch
+---@field id string
+---@field ships_to? string
+
+---@class ProductListMatch
+---@field category? string
+---@field cursor? string
+---@field field? string
+---@field form? string
+---@field in_stock? boolean
+---@field limit? number
+---@field peptide? string
+---@field search? string
+---@field ships_to? string
+---@field sort? string
+---@field vendor? string
+
+---@class Research
+---@field also_known_as table
+---@field api_url string
+---@field approved_medicine boolean
+---@field availability any
+---@field categories table
+---@field classification table
+---@field clinical_evidence table
+---@field conflict any
+---@field content table
+---@field content_reviewed_at any
+---@field content_total number
+---@field description string
+---@field development_stage any
+---@field evidence table
+---@field fda_status any
+---@field id string
+---@field label string
+---@field last_reviewed any
+---@field library_classification any
+---@field limitations table
+---@field links table
+---@field mechanism table
+---@field mechanisms table
+---@field name string
+---@field note string
+---@field notes table
+---@field peptide table
+---@field peptide_count number
+---@field peptide_total number
+---@field peptides table
+---@field preclinical_evidence table
+---@field properties table
+---@field query string
+---@field references table
+---@field regulatory table
+---@field regulatory_evidence table
+---@field regulatory_status string
+---@field regulatory_status_label string
+---@field research_areas table
+---@field research_gaps table
+---@field research_topics table
+---@field review table
+---@field safety table
+---@field secondary_reports table
+---@field statement any
+---@field summary any
+---@field unavailable_sources table
+---@field url string
+---@field wada_status any
+
+---@class ResearchLoadMatch
+---@field slug string
+
+---@class ResearchListMatch
+---@field also_known_as? table
+---@field api_url? string
+---@field approved_medicine? boolean
+---@field availability? any
+---@field categories? table
+---@field classification? table
+---@field clinical_evidence? table
+---@field conflict? any
+---@field content? table
+---@field content_reviewed_at? any
+---@field content_total? number
+---@field description? string
+---@field development_stage? any
+---@field evidence? table
+---@field fda_status? any
+---@field id? string
+---@field label? string
+---@field last_reviewed? any
+---@field library_classification? any
+---@field limitations? table
+---@field links? table
+---@field mechanism? table
+---@field mechanisms? table
+---@field name? string
+---@field note? string
+---@field notes? table
+---@field peptide? table
+---@field peptide_count? number
+---@field peptide_total? number
+---@field peptides? table
+---@field preclinical_evidence? table
+---@field properties? table
+---@field query? string
+---@field references? table
+---@field regulatory? table
+---@field regulatory_evidence? table
+---@field regulatory_status? string
+---@field regulatory_status_label? string
+---@field research_areas? table
+---@field research_gaps? table
+---@field research_topics? table
+---@field review? table
+---@field safety? table
+---@field secondary_reports? table
+---@field statement? any
+---@field summary? any
+---@field unavailable_sources? table
+---@field url? string
+---@field wada_status? any
+
+---@class ResearchStatistic
+---@field by_year table
+---@field categories table
+---@field chart_url any
+---@field citation string
+---@field columns table
+---@field definition string
+---@field denominator number|nil
+---@field denominator_definition string|nil
+---@field description string
+---@field detail any
+---@field doi string|nil
+---@field doi_url any
+---@field embed_url string
+---@field evidence_class string
+---@field filters table
+---@field first_pub_date string
+---@field flags table
+---@field groups table
+---@field how_to_read string
+---@field id string
+---@field is_peptide boolean
+---@field journal string|nil
+---@field key_publications table
+---@field kind string
+---@field label string
+---@field license table
+---@field limitations table
+---@field mesh_roots table
+---@field methodology_url string
+---@field metric string
+---@field min_baseline any
+---@field name string
+---@field numerator number|nil
+---@field numerator_definition string|nil
+---@field open_access boolean|nil
+---@field origin string|nil
+---@field partial_year number
+---@field peptide table
+---@field peptide_ids table
+---@field permalink string
+---@field pmid string
+---@field png_url string
+---@field publications any
+---@field published_at string
+---@field pubmed_url string
+---@field query string|nil
+---@field regulatory string|nil
+---@field research_url string
+---@field rows table
+---@field section number
+---@field slug string
+---@field snapshot table
+---@field source string
+---@field study_type string
+---@field study_types table
+---@field subtitle string
+---@field svg_url string
+---@field tier string
+---@field tier_reason string|nil
+---@field title string
+---@field totals any
+---@field trials any
+---@field unit string
+---@field url string
+---@field value number|nil
+---@field version number
+---@field versions table
+
+---@class ResearchStatisticLoadMatch
+---@field id string
+---@field version? string
+
+---@class ResearchStatisticListMatch
+---@field version? string
+
+---@class Study
+---@field analog_compound boolean
+---@field authors string
+---@field citations table
+---@field cited_by table
+---@field doi string|nil
+---@field evidence_classification string
+---@field evidence_classification_label string
+---@field id string
+---@field journal string
+---@field limitations table
+---@field nct_id string|nil
+---@field pmid string|nil
+---@field population any
+---@field publication_year any
+---@field research_model string
+---@field sample_size any
+---@field source_url any
+---@field study_type any
+---@field summary any
+---@field title string
+
+---@class StudyLoadMatch
+---@field id string
+
+---@class StudyListMatch
+---@field cursor? string
+---@field evidence_classification? string
+---@field field? string
+---@field limit? number
+---@field peptide? string
+---@field search? string
+---@field sort? string
+---@field year_from? number
+---@field year_to? number
+
+---@class Vendor
+---@field about table
+---@field api_url string
+---@field catalog table
+---@field country any
+---@field description string|nil
+---@field id string
+---@field logo_url any
+---@field name string
+---@field product_categories table
+---@field profile_url string
+---@field rating table
+---@field region string|nil
+---@field reviews table
+---@field shipping table
+---@field slug string
+---@field sources table
+---@field website_url string
+
+---@class VendorLoadMatch
+---@field id string
+---@field ships_to? string
+
+---@class VendorListMatch
+---@field country? string
+---@field cursor? string
+---@field field? string
+---@field limit? number
+---@field min_rating? number
+---@field peptide? string
+---@field product_category? string
+---@field search? string
+---@field ships_to? string
+---@field sort? string
+
+local M = {}
+
+return M

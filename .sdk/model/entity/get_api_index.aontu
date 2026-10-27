@@ -1,0 +1,76 @@
+# Entity: get_api_index
+
+main: kit: entity: get_api_index: {
+
+  alias: field: {}
+
+  fields: {
+    documentation: {
+      h: "Documentation"
+      n: "documentation"
+      r: true
+      sh: "Absolute URL."
+      t: "`$STRING`"
+    }
+    endpoints: {
+      h: "Endpoints"
+      n: "endpoints"
+      r: true
+      t: "`$ARRAY`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: true
+      t: "`$STRING`"
+    }
+    openapi: {
+      h: "Openapi"
+      n: "openapi"
+      r: true
+      sh: "Absolute URL."
+      t: "`$STRING`"
+    }
+    release: {
+      h: "Release"
+      n: "release"
+      r: true
+      t: "`$STRING`"
+    }
+    version: {
+      h: "Version"
+      n: "version"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "get_api_index"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

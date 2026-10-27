@@ -1,0 +1,44 @@
+# BasicVendorFlow
+
+main: kit: flow: BasicVendorFlow:
+{
+  entity: "vendor",
+  kind: "basic",
+  name: "BasicVendorFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "vendor_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "vendor_ref01",
+        srcdatavar: "vendor_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "vendor01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-vendor_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicVendorFlow"
+}

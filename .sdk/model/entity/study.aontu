@@ -1,0 +1,389 @@
+# Entity: study
+
+main: kit: entity: study: {
+
+  alias: field: {}
+
+  fields: {
+    analog_compound: {
+      h: "Analog Compound"
+      n: "analog_compound"
+      r: true
+      sh: "Research on a related compound, not this one."
+      t: "`$BOOLEAN`"
+    }
+    authors: {
+      h: "Authors"
+      n: "authors"
+      r: true
+      sh: "Not stored by Peptide Library."
+      t: "`$STRING`"
+    }
+    citations: {
+      h: "Citations"
+      n: "citations"
+      r: true
+      t: "`$ARRAY`"
+      union: {
+        branches: 2
+        count: 3
+        depth: 3
+      }
+    }
+    cited_by: {
+      h: "Cited By"
+      n: "cited_by"
+      r: true
+      t: "`$ARRAY`"
+    }
+    doi: {
+      h: "Doi"
+      n: "doi"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    evidence_classification: {
+      h: "Evidence Classification"
+      n: "evidence_classification"
+      r: true
+      t: "`$STRING`"
+    }
+    evidence_classification_label: {
+      h: "Evidence Classification Label"
+      n: "evidence_classification_label"
+      r: true
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      sh: "Stable id from the study's identifier (`pmid-…`, `doi-…`, `nct-…`); null when it has none."
+      t: "`$STRING`"
+    }
+    journal: {
+      h: "Journal"
+      n: "journal"
+      r: true
+      sh: "Not stored by Peptide Library."
+      t: "`$STRING`"
+    }
+    limitations: {
+      h: "Limitations"
+      n: "limitations"
+      r: true
+      t: "`$ARRAY`"
+    }
+    nct_id: {
+      h: "Nct Id"
+      n: "nct_id"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    pmid: {
+      h: "Pmid"
+      n: "pmid"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    population: {
+      h: "Population"
+      n: "population"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    publication_year: {
+      h: "Publication Year"
+      n: "publication_year"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    research_model: {
+      h: "Research Model"
+      n: "research_model"
+      r: true
+      t: "`$STRING`"
+    }
+    sample_size: {
+      h: "Sample Size"
+      n: "sample_size"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    source_url: {
+      h: "Source Url"
+      n: "source_url"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    study_type: {
+      h: "Study Type"
+      n: "study_type"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    summary: {
+      h: "Summary"
+      n: "summary"
+      r: true
+      sh: "The finding as summarised by Peptide Library editors (dose figures removed)."
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    title: {
+      h: "Title"
+      n: "title"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "study"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /peptides/{slug}/studies"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "bpc-157"
+                k: "param"
+                n: "slug"
+                or: "slug"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/peptides/{slug}/studies"
+          q: {
+            exist: [
+              "slug"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "peptides"
+            }
+            {
+              var: "slug"
+            }
+            {
+              lit: "studies"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /studies"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "cursor"
+                or: "cursor"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "human_controlled_trial"
+                k: "query"
+                n: "evidence_classification"
+                or: "evidence_classification"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "id,title,publication_year"
+                k: "query"
+                n: "field"
+                or: "fields"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: "semaglutide"
+                k: "query"
+                n: "peptide"
+                or: "peptide"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "search"
+                or: "search"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "sort"
+                or: "sort"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "year_from"
+                or: "year_from"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "year_to"
+                or: "year_to"
+                r: false
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/studies"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "studies"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /studies/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "pmid-33567185"
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/studies/{id}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "studies"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

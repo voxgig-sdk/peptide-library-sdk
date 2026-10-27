@@ -1,0 +1,1070 @@
+# Entity: research_statistic
+
+main: kit: entity: research_statistic: {
+
+  alias: field: {}
+
+  fields: {
+    by_year: {
+      h: "By Year"
+      n: "by_year"
+      r: true
+      t: "`$ARRAY`"
+    }
+    categories: {
+      h: "Categories"
+      n: "categories"
+      r: true
+      t: "`$ARRAY`"
+    }
+    chart_url: {
+      h: "Chart Url"
+      n: "chart_url"
+      r: true
+      t: "`$ANY`"
+    }
+    citation: {
+      h: "Citation"
+      n: "citation"
+      r: true
+      t: "`$STRING`"
+    }
+    columns: {
+      h: "Columns"
+      n: "columns"
+      r: true
+      t: "`$ARRAY`"
+    }
+    definition: {
+      h: "Definition"
+      n: "definition"
+      r: true
+      t: "`$STRING`"
+    }
+    denominator: {
+      h: "Denominator"
+      n: "denominator"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$NUMBER`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    denominator_definition: {
+      h: "Denominator Definition"
+      n: "denominator_definition"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: true
+      t: "`$STRING`"
+    }
+    detail: {
+      h: "Detail"
+      n: "detail"
+      r: true
+      sh: "Rankings (array of rows) or comparison detail (object); null when none."
+      t: "`$ANY`"
+    }
+    doi: {
+      h: "Doi"
+      n: "doi"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    doi_url: {
+      h: "Doi Url"
+      n: "doi_url"
+      r: true
+      t: "`$ANY`"
+    }
+    embed_url: {
+      h: "Embed Url"
+      n: "embed_url"
+      r: true
+      sh: "Absolute URL."
+      t: "`$STRING`"
+    }
+    evidence_class: {
+      h: "Evidence Class"
+      n: "evidence_class"
+      r: true
+      t: "`$STRING`"
+    }
+    filters: {
+      h: "Filters"
+      n: "filters"
+      r: true
+      t: "`$OBJECT`"
+      union: {
+        branches: 4
+        count: 1
+        depth: 1
+      }
+    }
+    first_pub_date: {
+      h: "First Pub Date"
+      n: "first_pub_date"
+      r: true
+      t: "`$STRING`"
+    }
+    flags: {
+      h: "Flags"
+      n: "flags"
+      r: true
+      sh: "Caveats: partial_year, small_baseline, high_unclassified, whole_months_only, no_denominator."
+      t: "`$ARRAY`"
+    }
+    groups: {
+      h: "Groups"
+      n: "groups"
+      r: true
+      t: "`$ARRAY`"
+    }
+    how_to_read: {
+      h: "How To Read"
+      n: "how_to_read"
+      r: true
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      sh: "`pmid-` + the PubMed id."
+      t: "`$STRING`"
+    }
+    is_peptide: {
+      h: "Is Peptide"
+      n: "is_peptide"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    journal: {
+      h: "Journal"
+      n: "journal"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    key_publications: {
+      h: "Key Publications"
+      n: "key_publications"
+      r: true
+      t: "`$ARRAY`"
+    }
+    kind: {
+      h: "Kind"
+      n: "kind"
+      r: true
+      t: "`$STRING`"
+    }
+    label: {
+      h: "Label"
+      n: "label"
+      r: true
+      t: "`$STRING`"
+    }
+    license: {
+      h: "License"
+      n: "license"
+      r: true
+      t: "`$OBJECT`"
+    }
+    limitations: {
+      h: "Limitations"
+      n: "limitations"
+      r: true
+      t: "`$ARRAY`"
+    }
+    mesh_roots: {
+      h: "Mesh Roots"
+      n: "mesh_roots"
+      r: true
+      t: "`$ARRAY`"
+    }
+    methodology_url: {
+      h: "Methodology Url"
+      n: "methodology_url"
+      r: true
+      sh: "Absolute URL."
+      t: "`$STRING`"
+    }
+    metric: {
+      h: "Metric"
+      n: "metric"
+      r: true
+      t: "`$STRING`"
+    }
+    min_baseline: {
+      h: "Min Baseline"
+      n: "min_baseline"
+      r: true
+      t: "`$ANY`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: true
+      t: "`$STRING`"
+    }
+    numerator: {
+      h: "Numerator"
+      n: "numerator"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$NUMBER`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    numerator_definition: {
+      h: "Numerator Definition"
+      n: "numerator_definition"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    open_access: {
+      h: "Open Access"
+      n: "open_access"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$BOOLEAN`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    origin: {
+      h: "Origin"
+      n: "origin"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    partial_year: {
+      h: "Partial Year"
+      n: "partial_year"
+      r: true
+      sh: "The cutoff year, which is incomplete."
+      t: "`$INTEGER`"
+    }
+    peptide: {
+      h: "Peptide"
+      n: "peptide"
+      r: true
+      t: "`$OBJECT`"
+    }
+    peptide_ids: {
+      h: "Peptide Ids"
+      n: "peptide_ids"
+      r: true
+      t: "`$ARRAY`"
+    }
+    permalink: {
+      h: "Permalink"
+      n: "permalink"
+      r: true
+      sh: "Absolute URL."
+      t: "`$STRING`"
+    }
+    pmid: {
+      h: "Pmid"
+      n: "pmid"
+      r: true
+      t: "`$STRING`"
+    }
+    png_url: {
+      h: "Png Url"
+      n: "png_url"
+      r: true
+      sh: "Absolute URL."
+      t: "`$STRING`"
+    }
+    publications: {
+      h: "Publications"
+      n: "publications"
+      r: true
+      t: "`$ANY`"
+    }
+    published_at: {
+      h: "Published At"
+      n: "published_at"
+      r: true
+      t: "`$STRING`"
+    }
+    pubmed_url: {
+      h: "Pubmed Url"
+      n: "pubmed_url"
+      r: true
+      sh: "Absolute URL."
+      t: "`$STRING`"
+    }
+    query: {
+      h: "Query"
+      n: "query"
+      r: true
+      sh: "The exact Europe PMC query behind the counts."
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    regulatory: {
+      h: "Regulatory"
+      n: "regulatory"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    research_url: {
+      h: "Research Url"
+      n: "research_url"
+      r: true
+      sh: "Absolute URL."
+      t: "`$STRING`"
+    }
+    rows: {
+      h: "Rows"
+      n: "rows"
+      r: true
+      t: "`$ARRAY`"
+      union: {
+        branches: 4
+        count: 1
+        depth: 2
+      }
+    }
+    section: {
+      h: "Section"
+      n: "section"
+      r: true
+      sh: "State of Peptide Research section that uses it."
+      t: "`$INTEGER`"
+    }
+    slug: {
+      h: "Slug"
+      n: "slug"
+      r: true
+      t: "`$STRING`"
+    }
+    snapshot: {
+      h: "Snapshot"
+      n: "snapshot"
+      r: true
+      t: "`$OBJECT`"
+    }
+    source: {
+      h: "Source"
+      n: "source"
+      r: true
+      t: "`$STRING`"
+    }
+    study_type: {
+      h: "Study Type"
+      n: "study_type"
+      r: true
+      t: "`$STRING`"
+    }
+    study_types: {
+      h: "Study Types"
+      n: "study_types"
+      r: true
+      t: "`$ARRAY`"
+    }
+    subtitle: {
+      h: "Subtitle"
+      n: "subtitle"
+      r: true
+      t: "`$STRING`"
+    }
+    svg_url: {
+      h: "Svg Url"
+      n: "svg_url"
+      r: true
+      sh: "Absolute URL."
+      t: "`$STRING`"
+    }
+    tier: {
+      h: "Tier"
+      n: "tier"
+      r: true
+      sh: "`counts_only`: yearly counts only (a very large, general literature); `excluded`: a blend or comparison entry."
+      t: "`$STRING`"
+    }
+    tier_reason: {
+      h: "Tier Reason"
+      n: "tier_reason"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    title: {
+      h: "Title"
+      n: "title"
+      r: true
+      t: "`$STRING`"
+    }
+    totals: {
+      h: "Totals"
+      n: "totals"
+      r: true
+      t: "`$ANY`"
+    }
+    trials: {
+      h: "Trials"
+      n: "trials"
+      r: true
+      t: "`$ANY`"
+    }
+    unit: {
+      h: "Unit"
+      n: "unit"
+      r: true
+      t: "`$STRING`"
+    }
+    url: {
+      h: "Url"
+      n: "url"
+      r: true
+      sh: "Absolute URL."
+      t: "`$STRING`"
+    }
+    value: {
+      h: "Value"
+      n: "value"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$NUMBER`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    version: {
+      h: "Version"
+      n: "version"
+      r: true
+      t: "`$INTEGER`"
+    }
+    versions: {
+      h: "Versions"
+      n: "versions"
+      r: true
+      t: "`$ARRAY`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "research_statistic"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /research/categories"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "latest"
+                k: "query"
+                n: "version"
+                or: "version"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/research/categories"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "research"
+            }
+            {
+              lit: "categories"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /research/datasets"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/research/datasets"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "research"
+            }
+            {
+              lit: "datasets"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /research/publications"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "category"
+                or: "category"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "cursor"
+                or: "cursor"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "evidence_class"
+                or: "evidence_class"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "id,pmid,doi"
+                k: "query"
+                n: "field"
+                or: "fields"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "glp1"
+                k: "query"
+                n: "group"
+                or: "group"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 25
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: "semaglutide"
+                k: "query"
+                n: "peptide"
+                or: "peptide"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "regulatory"
+                or: "regulatory"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "search"
+                or: "search"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "study_type"
+                or: "study_type"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "latest"
+                k: "query"
+                n: "version"
+                or: "version"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "year"
+                or: "year"
+                r: false
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/research/publications"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "research"
+            }
+            {
+              lit: "publications"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /research/reports"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/research/reports"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "research"
+            }
+            {
+              lit: "reports"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /research/statistics"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "cursor"
+                or: "cursor"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 50
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "section"
+                or: "section"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: "latest"
+                k: "query"
+                n: "version"
+                or: "version"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/research/statistics"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "research"
+            }
+            {
+              lit: "statistics"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /research/charts/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "publications-by-year"
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "latest"
+                k: "query"
+                n: "version"
+                or: "version"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/research/charts/{id}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "research"
+            }
+            {
+              lit: "charts"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /research/statistics/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "total_publications"
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "latest"
+                k: "query"
+                n: "version"
+                or: "version"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/research/statistics/{id}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "research"
+            }
+            {
+              lit: "statistics"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /research/trends"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "category"
+                or: "category"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "evidence_class"
+                or: "evidence_class"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "from_year"
+                or: "from_year"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: "glp1"
+                k: "query"
+                n: "group"
+                or: "group"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "publications_by_year"
+                k: "query"
+                n: "metric"
+                or: "metric"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "semaglutide"
+                k: "query"
+                n: "peptide"
+                or: "peptide"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "regulatory"
+                or: "regulatory"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "study_type"
+                or: "study_type"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "to_year"
+                or: "to_year"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: "latest"
+                k: "query"
+                n: "version"
+                or: "version"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/research/trends"
+          q: {
+            exist: [
+              "metric"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "research"
+            }
+            {
+              lit: "trends"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /research/peptides/{slug}/statistics"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "bpc-157"
+                k: "param"
+                n: "slug"
+                or: "slug"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "latest"
+                k: "query"
+                n: "version"
+                or: "version"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/research/peptides/{slug}/statistics"
+          q: {
+            exist: [
+              "slug"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "research"
+            }
+            {
+              lit: "peptides"
+            }
+            {
+              var: "slug"
+            }
+            {
+              lit: "statistics"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

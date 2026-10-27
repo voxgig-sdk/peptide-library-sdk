@@ -1,0 +1,73 @@
+{
+  "existing": {
+    "product": {
+      "PRODUCT00": {
+        "api_url": "s6e",
+        "form": "s6f",
+        "id": "PRODUCT00",
+        "in_stock_count": 113,
+        "last_seen_at": "s72",
+        "offer_count": 115,
+        "offers": "s74",
+        "peptide": {},
+        "prices": [],
+        "product_type": "s77",
+        "vendor_count": 120
+      },
+      "PRODUCT01": {
+        "api_url": "sdc",
+        "form": "sdd",
+        "id": "PRODUCT01",
+        "in_stock_count": 223,
+        "last_seen_at": "se0",
+        "offer_count": 225,
+        "offers": "se2",
+        "peptide": {},
+        "prices": [],
+        "product_type": "se5",
+        "vendor_count": 230
+      },
+      "PRODUCT02": {
+        "api_url": "s14a",
+        "form": "s14b",
+        "id": "PRODUCT02",
+        "in_stock_count": 333,
+        "last_seen_at": "s14e",
+        "offer_count": 335,
+        "offers": "s150",
+        "peptide": {},
+        "prices": [],
+        "product_type": "s153",
+        "vendor_count": 340
+      }
+    }
+  },
+  "new": {
+    "product": {
+      "product_ref01": {
+        "api_url": "s1b8",
+        "form": "s1b9",
+        "in_stock_count": 443,
+        "last_seen_at": "s1bc",
+        "offer_count": 445,
+        "offers": "s1be",
+        "peptide": {},
+        "prices": [],
+        "product_type": "s1c1",
+        "vendor_count": 450
+      }
+    }
+  },
+  "requests": {
+    "GET /products": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /products/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

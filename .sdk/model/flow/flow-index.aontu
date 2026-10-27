@@ -1,0 +1,10 @@
+# Flows
+
+@"./BasicGetApiIndexFlow.aontu"
+@"./BasicMetaFlow.aontu"
+@"./BasicPriceFlow.aontu"
+@"./BasicProductFlow.aontu"
+@"./BasicResearchFlow.aontu"
+@"./BasicResearchStatisticFlow.aontu"
+@"./BasicStudyFlow.aontu"
+@"./BasicVendorFlow.aontu"

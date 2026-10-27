@@ -1,0 +1,74 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        email: "support@peptidelibrary.app"
+        name: "Peptide Library developer support"
+        url: "https://peptidelibrary.app/developers"
+      }
+      description: `Peptide research data, scientific literature and vendor information from [Peptide Library](https://peptidelibrary.app).
+
+**Research and education only.** Research and educational information only. Not medical advice, and not a recommendation to buy or use any substance. Many of these compounds are not approved for human use. The API never returns dose figures, regimens, reconstitution or injection instructions.
+
+## Authentication
+Research and study endpoints work without a key (limited per IP address). Vendor, product and price endpoints need an API key with the matching scope, sent as \`Authorization: Bearer pl_live_…\` (or \`X-API-Key\`). Create keys at https://peptidelibrary.app/developers/dashboard. Keep keys on your server: never put them in a browser or app bundle.
+
+Scopes: \`research:read\`, \`studies:read\`, \`vendors:read\`, \`products:read\`, \`pricing:read\`.
+
+## Rate limits
+Keyed vendor, product and price requests count against your plan's per-minute and monthly limits (Free Developer: 60 per minute, 5,000 per month). Each response carries \`RateLimit-Limit\`, \`RateLimit-Remaining\` and \`RateLimit-Reset\`; over the limit you get **429** with \`Retry-After\`. Anonymous requests are limited per IP address.
+
+## Conventions
+JSON envelopes: \`{ data, pagination?, meta }\` and \`{ error: { code, message, request_id } }\`. Lists use cursor pagination (\`limit\`, \`cursor\` → \`pagination.next_cursor\`). Timestamps are UTC ISO 8601; money is a decimal string in the listed currency, never converted. Research fields a profile doesn't document are the string \`not_documented\`; unknown vendor and price fields are \`null\`. Responses carry \`ETag\` (send \`If-None-Match\` for 304) and \`X-Request-Id\`.
+
+## Prices and affiliate links
+Peptide Library may earn a commission when you buy through these links, at no cost to you. Commissions never affect which offers are listed or their order. Prices are as last seen on the vendor's site; check the vendor before relying on them. Offers come only from vendors whose prices Peptide Library may share, are matched to a library profile and were seen on the vendor's site in the last 30 days.`
+      license: {
+        name: "Peptide Library API Terms of Use"
+        url: "https://peptidelibrary.app/developers/terms"
+      }
+      security: {
+        alternatives: [
+          [
+            {
+              in: "header"
+              name: "X-API-Key"
+              prefix: ""
+              scheme: "apiKeyHeader"
+              type: "apiKey"
+            }
+          ]
+        ]
+        in: "header"
+        name: "Authorization"
+        prefix: "Bearer"
+        scheme: "bearerAuth"
+        type: "http"
+      }
+      servers: [
+        {
+          description: "Production"
+          url: "https://api.peptidelibrary.app/v1"
+        }
+        {
+          description: "Production (same API on the website host)"
+          url: "https://peptidelibrary.app/api/v1"
+        }
+      ]
+      summary: "Peptide research data, scientific literature and vendor information for developers."
+      termsOfService: "https://peptidelibrary.app/developers/terms"
+      title: "Peptide Library API"
+      version: "1.1.0"
+      website: "https://peptidelibrary.app/developers/docs"
+      "x-logo": {
+        altText: "Peptide Library"
+        href: "https://peptidelibrary.app"
+        url: "https://peptidelibrary.app/icon.png"
+      }
+    }
+  }
+}
+

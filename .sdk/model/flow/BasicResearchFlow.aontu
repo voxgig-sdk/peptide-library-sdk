@@ -1,0 +1,44 @@
+# BasicResearchFlow
+
+main: kit: flow: BasicResearchFlow:
+{
+  entity: "research",
+  kind: "basic",
+  name: "BasicResearchFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "research_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "research_ref01",
+        srcdatavar: "research_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "research01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-research_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicResearchFlow"
+}

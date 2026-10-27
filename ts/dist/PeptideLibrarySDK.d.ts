@@ -1,0 +1,61 @@
+import { GetApiIndexEntity } from './entity/GetApiIndexEntity';
+import { MetaEntity } from './entity/MetaEntity';
+import { PriceEntity } from './entity/PriceEntity';
+import { ProductEntity } from './entity/ProductEntity';
+import { ResearchEntity } from './entity/ResearchEntity';
+import { ResearchStatisticEntity } from './entity/ResearchStatisticEntity';
+import { StudyEntity } from './entity/StudyEntity';
+import { VendorEntity } from './entity/VendorEntity';
+export type * from './PeptideLibraryTypes';
+import { inspect } from 'node:util';
+import type { Context, Feature } from './types';
+import { config } from './Config';
+import { PeptideLibraryEntityBase } from './PeptideLibraryEntityBase';
+import { Utility } from './utility/Utility';
+import { BaseFeature } from './feature/base/BaseFeature';
+declare const stdutil: Utility;
+type DirectResult = {
+    ok: false;
+    err: any;
+    status?: undefined;
+    headers?: undefined;
+    data?: undefined;
+} | {
+    ok: boolean;
+    status: number;
+    headers: any;
+    data: any;
+    err?: any;
+};
+declare class PeptideLibrarySDK {
+    _mode: string;
+    _options: any;
+    _utility: Utility;
+    _features: Feature[];
+    _rootctx: Context;
+    constructor(options?: any);
+    options(): any;
+    utility(): any;
+    prepare(fetchargs?: any): Promise<any>;
+    direct(fetchargs?: any): Promise<DirectResult>;
+    _rawRequest(fetchargs?: any): Promise<DirectResult>;
+    graphql(query: string, variables?: any, ctrl?: any): Promise<any>;
+    GetApiIndex(entopts?: Record<string, any>): GetApiIndexEntity;
+    Meta(entopts?: Record<string, any>): MetaEntity;
+    Price(entopts?: Record<string, any>): PriceEntity;
+    Product(entopts?: Record<string, any>): ProductEntity;
+    Research(entopts?: Record<string, any>): ResearchEntity;
+    ResearchStatistic(entopts?: Record<string, any>): ResearchStatisticEntity;
+    Study(entopts?: Record<string, any>): StudyEntity;
+    Vendor(entopts?: Record<string, any>): VendorEntity;
+    static test(testoptsarg?: any, sdkoptsarg?: any): PeptideLibrarySDK;
+    tester(testopts?: any, sdkopts?: any): PeptideLibrarySDK;
+    toJSON(): {
+        name: string;
+    };
+    toString(): string;
+    [inspect.custom](): string;
+}
+declare const SDK: typeof PeptideLibrarySDK;
+export { stdutil, config, BaseFeature, PeptideLibraryEntityBase, PeptideLibrarySDK, SDK, };
+export type { DirectResult };

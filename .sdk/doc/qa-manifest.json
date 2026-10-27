@@ -1,0 +1,38 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "> Peptide research data, scientific literature and vendor information from [Peptide Library](https://peptidelibrary.app).\n>\n> **Research and education only.** Research and educational information only. Not medical advice, and not a recommendation to buy or use any substance. Many of these compounds are not approved for human use. The API never returns dose figures, regimens, reconstitution or injection instructions.\n>\n> ## Authentication\n> Research and study endpoints work without a key (limited per IP address). Vendor, product and price endpoints need an API key with the matching scope, sent as `Authorization: Bearer pl_live_…` (or `X-API-Key`). Create keys at https://peptidelibrary.app/developers/dashboard. Keep keys on your server: never put them in a browser or app bundle.\n>\n> Scopes: `research:read`, `studies:read`, `vendors:read`, `products:read`, `pricing:read`.\n>\n> ## Rate limits\n> Keyed vendor, product and price requests count against your plan&#39;s per-minute and monthly limits (Free Developer: 60 per minute, 5,000 per month). Each response carries `RateLimit-Limit`, `RateLimit-Remaining` and `RateLimit-Reset`; over the limit you get **429** with `Retry-After`. Anonymous requests are limited per IP address.\n>\n> ## Conventions\n> JSON envelopes: `&#123; data, pagination?, meta &#125;` and `&#123; error: &#123; code, message, request_id &#125; &#125;`. Lists use cursor pagination (`limit`, `cursor` → `pagination.next_cursor`). Timestamps are UTC ISO 8601; money is a decimal string in the listed currency, never converted. Research fields a profile doesn&#39;t document are the string `not_documented`; unknown vendor and price fields are `null`. Responses carry `ETag` (send `If-None-Match` for 304) and `X-Request-Id`.\n>\n> ## Prices and affiliate links\n> Peptide Library may earn a commission when you buy through these links, at no cost to you. Commissions never affect which offers are listed or their order. Prices are as last seen on the vendor&#39;s site; check the vendor before relying on them. Offers come only from vendors whose prices Peptide Library may share, are matched to a library profile and were seen on the vendor&#39;s site in the last 30 days.",
+      "API key from https://peptidelibrary.app/developers/dashboard, sent as `Authorization: Bearer pl_live_…`.",
+      "Absolute URL.",
+      "As the vendor lists it.",
+      "Caveats: `partial_year`, `small_baseline`, `high_unclassified`, `whole_months_only`, `no_denominator`.",
+      "Compound and form, for example `bpc-157::vial`.",
+      "Decimal amount as a string, never a float.",
+      "Evidence steps with no documented source in the profile.",
+      "Not stored by Peptide Library.",
+      "OK",
+      "Offer id.",
+      "Peptide Library link to the vendor&#39;s site (may be an affiliate link).",
+      "Per currency, never converted or mixed.",
+      "Production",
+      "Production (same API on the website host)",
+      "Rankings (array of rows) or comparison detail (object); null when none.",
+      "Regulatory class read from the profile&#39;s FDA status.",
+      "Research on a related compound, not this one.",
+      "Stable id from the study&#39;s identifier (`pmid-…`, `doi-…`, `nct-…`); null when it has none.",
+      "The finding as summarised by Peptide Library editors (dose figures removed).",
+      "The same key in an `X-API-Key` header.",
+      "True only when the recorded FDA status is Approved.",
+      "True when not seen in the last 7 days.",
+      "When the price was last seen on the vendor&#39;s site.",
+      "With the `pricing:read` scope; otherwise null.",
+      "`pmid-` + the PubMed id.",
+      "`report`: an editorially approved edition; `weekly`: the automated refresh behind the live dashboard."
+    ]
+  }
+}

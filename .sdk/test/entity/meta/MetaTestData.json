@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "meta": {
+      "META00": {
+        "database": "s1e",
+        "release": "s1f",
+        "status": "s20",
+        "id": "META00"
+      },
+      "META01": {
+        "database": "s3c",
+        "release": "s3d",
+        "status": "s3e",
+        "id": "META01"
+      },
+      "META02": {
+        "database": "s5a",
+        "release": "s5b",
+        "status": "s5c",
+        "id": "META02"
+      }
+    }
+  },
+  "new": {
+    "meta": {
+      "meta_ref01": {
+        "database": "s78",
+        "release": "s79",
+        "status": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "GET /health": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

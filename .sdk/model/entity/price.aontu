@@ -1,0 +1,388 @@
+# Entity: price
+
+main: kit: entity: price: {
+
+  alias: field: {}
+
+  fields: {
+    availability: {
+      h: "Availability"
+      n: "availability"
+      r: true
+      t: "`$STRING`"
+    }
+    currency: {
+      h: "Currency"
+      n: "currency"
+      r: true
+      t: "`$STRING`"
+    }
+    first_seen_at: {
+      h: "First Seen At"
+      n: "first_seen_at"
+      r: true
+      t: "`$ANY`"
+    }
+    form: {
+      h: "Form"
+      n: "form"
+      r: true
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      sh: "Offer id."
+      t: "`$STRING`"
+    }
+    is_affiliate_link: {
+      h: "Is Affiliate Link"
+      n: "is_affiliate_link"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    is_stale: {
+      h: "Is Stale"
+      n: "is_stale"
+      r: true
+      sh: "True when not seen in the last 7 days."
+      t: "`$BOOLEAN`"
+    }
+    last_seen_at: {
+      h: "Last Seen At"
+      n: "last_seen_at"
+      r: true
+      sh: "When the price was last seen on the vendor's site."
+      t: "`$ANY`"
+    }
+    peptide: {
+      h: "Peptide"
+      n: "peptide"
+      r: true
+      t: "`$OBJECT`"
+    }
+    price: {
+      h: "Price"
+      n: "price"
+      r: true
+      sh: "Decimal amount as a string, never a float."
+      t: "`$STRING`"
+    }
+    price_changed_at: {
+      h: "Price Changed At"
+      n: "price_changed_at"
+      r: true
+      t: "`$ANY`"
+    }
+    price_per_mg: {
+      h: "Price Per Mg"
+      n: "price_per_mg"
+      r: true
+      t: "`$ANY`"
+    }
+    price_per_unit: {
+      h: "Price Per Unit"
+      n: "price_per_unit"
+      r: true
+      t: "`$ANY`"
+    }
+    product_id: {
+      h: "Product Id"
+      n: "product_id"
+      r: true
+      t: "`$STRING`"
+    }
+    product_name: {
+      h: "Product Name"
+      n: "product_name"
+      r: true
+      sh: "As the vendor lists it."
+      t: "`$STRING`"
+    }
+    product_page_url: {
+      h: "Product Page Url"
+      n: "product_page_url"
+      r: true
+      sh: "Peptide Library redirect to the vendor's page; logs the click."
+      t: "`$STRING`"
+    }
+    product_type: {
+      h: "Product Type"
+      n: "product_type"
+      r: true
+      t: "`$STRING`"
+    }
+    regular_price: {
+      h: "Regular Price"
+      n: "regular_price"
+      r: true
+      t: "`$ANY`"
+    }
+    ships_to: {
+      h: "Ships To"
+      n: "ships_to"
+      r: true
+      sh: "Shipping to the `ships_to` destination you asked about; null when you didn't ask."
+      t: "`$ANY`"
+    }
+    strength: {
+      h: "Strength"
+      n: "strength"
+      r: true
+      t: "`$OBJECT`"
+    }
+    vendor: {
+      h: "Vendor"
+      n: "vendor"
+      r: true
+      t: "`$OBJECT`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "price"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /prices"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "peptides"
+                k: "query"
+                n: "category"
+                or: "category"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "USD"
+                k: "query"
+                n: "currency"
+                or: "currency"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "cursor"
+                or: "cursor"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "id,product_id,product_name"
+                k: "query"
+                n: "field"
+                or: "fields"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "vial"
+                k: "query"
+                n: "form"
+                or: "form"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "in_stock"
+                or: "in_stock"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: "bpc-157"
+                k: "query"
+                n: "peptide"
+                or: "peptide"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "price_max"
+                or: "price_max"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                k: "query"
+                n: "price_min"
+                or: "price_min"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                k: "query"
+                n: "product"
+                or: "product"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "search"
+                or: "search"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "US"
+                k: "query"
+                n: "ships_to"
+                or: "ships_to"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "sort"
+                or: "sort"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "strength_max_mg"
+                or: "strength_max_mg"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                k: "query"
+                n: "strength_min_mg"
+                or: "strength_min_mg"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                k: "query"
+                n: "vendor"
+                or: "vendor"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/prices"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "prices"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /prices/compare"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "currency"
+                or: "currency"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "form"
+                or: "form"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "in_stock"
+                or: "in_stock"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: "bpc-157"
+                k: "query"
+                n: "peptide"
+                or: "peptide"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "US"
+                k: "query"
+                n: "ships_to"
+                or: "ships_to"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/prices/compare"
+          q: {
+            "$action": "compare"
+            exist: [
+              "peptide"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "prices"
+            }
+            {
+              lit: "compare"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

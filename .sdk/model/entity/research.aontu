@@ -1,0 +1,790 @@
+# Entity: research
+
+main: kit: entity: research: {
+
+  alias: field: {}
+
+  fields: {
+    also_known_as: {
+      h: "Also Known As"
+      n: "also_known_as"
+      r: true
+      t: "`$ARRAY`"
+    }
+    api_url: {
+      h: "Api Url"
+      n: "api_url"
+      r: true
+      sh: "Absolute URL."
+      t: "`$STRING`"
+    }
+    approved_medicine: {
+      h: "Approved Medicine"
+      n: "approved_medicine"
+      r: true
+      sh: "True only when the recorded FDA status is Approved."
+      t: "`$BOOLEAN`"
+    }
+    availability: {
+      h: "Availability"
+      n: "availability"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    categories: {
+      h: "Categories"
+      n: "categories"
+      r: true
+      t: "`$ARRAY`"
+    }
+    classification: {
+      h: "Classification"
+      n: "classification"
+      r: true
+      t: "`$OBJECT`"
+      union: {
+        branches: 2
+        count: 4
+        depth: 2
+      }
+    }
+    clinical_evidence: {
+      h: "Clinical Evidence"
+      n: "clinical_evidence"
+      r: true
+      t: "`$OBJECT`"
+      union: {
+        branches: 2
+        count: 9
+        depth: 5
+      }
+    }
+    conflict: {
+      h: "Conflict"
+      n: "conflict"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    content: {
+      h: "Content"
+      n: "content"
+      r: true
+      t: "`$ARRAY`"
+    }
+    content_reviewed_at: {
+      h: "Content Reviewed At"
+      n: "content_reviewed_at"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    content_total: {
+      h: "Content Total"
+      n: "content_total"
+      r: true
+      t: "`$INTEGER`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: true
+      t: "`$STRING`"
+    }
+    development_stage: {
+      h: "Development Stage"
+      n: "development_stage"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    evidence: {
+      h: "Evidence"
+      n: "evidence"
+      r: true
+      t: "`$OBJECT`"
+      union: {
+        branches: 2
+        count: 16
+        depth: 5
+      }
+    }
+    fda_status: {
+      h: "Fda Status"
+      n: "fda_status"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    label: {
+      h: "Label"
+      n: "label"
+      r: true
+      t: "`$STRING`"
+    }
+    last_reviewed: {
+      h: "Last Reviewed"
+      n: "last_reviewed"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    library_classification: {
+      h: "Library Classification"
+      n: "library_classification"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    limitations: {
+      h: "Limitations"
+      n: "limitations"
+      r: true
+      t: "`$ARRAY`"
+    }
+    links: {
+      h: "Links"
+      n: "links"
+      r: true
+      t: "`$OBJECT`"
+    }
+    mechanism: {
+      h: "Mechanism"
+      n: "mechanism"
+      r: true
+      t: "`$OBJECT`"
+      union: {
+        branches: 2
+        count: 2
+        depth: 2
+      }
+    }
+    mechanisms: {
+      h: "Mechanisms"
+      n: "mechanisms"
+      r: true
+      t: "`$OBJECT`"
+      union: {
+        branches: 2
+        count: 3
+        depth: 2
+      }
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: true
+      t: "`$STRING`"
+    }
+    note: {
+      h: "Note"
+      n: "note"
+      r: true
+      t: "`$STRING`"
+    }
+    notes: {
+      h: "Notes"
+      n: "notes"
+      r: true
+      t: "`$ARRAY`"
+    }
+    peptide: {
+      h: "Peptide"
+      n: "peptide"
+      r: true
+      t: "`$OBJECT`"
+    }
+    peptide_count: {
+      h: "Peptide Count"
+      n: "peptide_count"
+      r: true
+      t: "`$INTEGER`"
+    }
+    peptide_total: {
+      h: "Peptide Total"
+      n: "peptide_total"
+      r: true
+      t: "`$INTEGER`"
+    }
+    peptides: {
+      h: "Peptides"
+      n: "peptides"
+      r: true
+      t: "`$ARRAY`"
+      union: {
+        branches: 2
+        count: 6
+        depth: 5
+      }
+    }
+    preclinical_evidence: {
+      h: "Preclinical Evidence"
+      n: "preclinical_evidence"
+      r: true
+      t: "`$OBJECT`"
+      union: {
+        branches: 2
+        count: 7
+        depth: 5
+      }
+    }
+    properties: {
+      h: "Properties"
+      n: "properties"
+      r: true
+      t: "`$OBJECT`"
+      union: {
+        branches: 2
+        count: 6
+        depth: 2
+      }
+    }
+    query: {
+      h: "Query"
+      n: "query"
+      r: true
+      t: "`$STRING`"
+    }
+    references: {
+      h: "References"
+      n: "references"
+      r: true
+      t: "`$ARRAY`"
+    }
+    regulatory: {
+      h: "Regulatory"
+      n: "regulatory"
+      r: true
+      t: "`$OBJECT`"
+      union: {
+        branches: 2
+        count: 5
+        depth: 2
+      }
+    }
+    regulatory_evidence: {
+      h: "Regulatory Evidence"
+      n: "regulatory_evidence"
+      r: true
+      t: "`$ARRAY`"
+      union: {
+        branches: 2
+        count: 6
+        depth: 3
+      }
+    }
+    regulatory_status: {
+      h: "Regulatory Status"
+      n: "regulatory_status"
+      r: true
+      sh: "Regulatory class read from the profile's FDA status."
+      t: "`$STRING`"
+    }
+    regulatory_status_label: {
+      h: "Regulatory Status Label"
+      n: "regulatory_status_label"
+      r: true
+      t: "`$STRING`"
+    }
+    research_areas: {
+      h: "Research Areas"
+      n: "research_areas"
+      r: true
+      t: "`$ARRAY`"
+    }
+    research_gaps: {
+      h: "Research Gaps"
+      n: "research_gaps"
+      r: true
+      sh: "Evidence steps with no documented source in the profile."
+      t: "`$ARRAY`"
+    }
+    research_topics: {
+      h: "Research Topics"
+      n: "research_topics"
+      r: true
+      t: "`$ARRAY`"
+    }
+    review: {
+      h: "Review"
+      n: "review"
+      r: true
+      t: "`$OBJECT`"
+      union: {
+        branches: 2
+        count: 3
+        depth: 2
+      }
+    }
+    safety: {
+      h: "Safety"
+      n: "safety"
+      r: true
+      t: "`$OBJECT`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 2
+      }
+    }
+    secondary_reports: {
+      h: "Secondary Reports"
+      n: "secondary_reports"
+      r: true
+      t: "`$OBJECT`"
+      union: {
+        branches: 2
+        count: 7
+        depth: 5
+      }
+    }
+    statement: {
+      h: "Statement"
+      n: "statement"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    summary: {
+      h: "Summary"
+      n: "summary"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    unavailable_sources: {
+      h: "Unavailable Sources"
+      n: "unavailable_sources"
+      r: true
+      t: "`$ARRAY`"
+    }
+    url: {
+      h: "Url"
+      n: "url"
+      r: true
+      sh: "Absolute URL."
+      t: "`$STRING`"
+    }
+    wada_status: {
+      h: "Wada Status"
+      n: "wada_status"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "research"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /categories"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/categories"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "categories"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /peptides"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "category"
+                or: "category"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "cursor"
+                or: "cursor"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "evidence_level"
+                or: "evidence_level"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "id,name,also_known_as"
+                k: "query"
+                n: "field"
+                or: "fields"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "regulatory_status"
+                or: "regulatory_status"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "research_area"
+                or: "research_area"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "bpc"
+                k: "query"
+                n: "search"
+                or: "search"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "sort"
+                or: "sort"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/peptides"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "peptides"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /research-areas"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "cursor"
+                or: "cursor"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                k: "query"
+                n: "search"
+                or: "search"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/research-areas"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "research-areas"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /search"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: 10
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: "glp-1"
+                k: "query"
+                n: "q"
+                or: "q"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "type"
+                or: "types"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/search"
+          q: {
+            exist: [
+              "q"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "search"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /peptides/{slug}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "bpc-157"
+                k: "param"
+                n: "slug"
+                or: "slug"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/peptides/{slug}"
+          q: {
+            exist: [
+              "slug"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "peptides"
+            }
+            {
+              var: "slug"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /peptides/{slug}/research"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "bpc-157"
+                k: "param"
+                n: "slug"
+                or: "slug"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/peptides/{slug}/research"
+          q: {
+            exist: [
+              "slug"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "peptides"
+            }
+            {
+              var: "slug"
+            }
+            {
+              lit: "research"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /regulatory-status/{slug}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "bpc-157"
+                k: "param"
+                n: "slug"
+                or: "slug"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/regulatory-status/{slug}"
+          q: {
+            exist: [
+              "slug"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "regulatory-status"
+            }
+            {
+              var: "slug"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

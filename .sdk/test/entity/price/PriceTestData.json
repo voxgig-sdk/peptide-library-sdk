@@ -1,0 +1,113 @@
+{
+  "existing": {
+    "price": {
+      "PRICE00": {
+        "availability": "sd2",
+        "currency": "sd3",
+        "first_seen_at": "sd4",
+        "form": "sd5",
+        "id": "PRICE00",
+        "is_affiliate_link": false,
+        "is_stale": true,
+        "last_seen_at": "sd9",
+        "peptide": {},
+        "price": "sdb",
+        "price_changed_at": "sdc",
+        "price_per_mg": "sdd",
+        "price_per_unit": "sde",
+        "product_id": "PRODUCT01",
+        "product_name": "se0",
+        "product_page_url": "se1",
+        "product_type": "se2",
+        "regular_price": "se3",
+        "ships_to": "se4",
+        "strength": {},
+        "vendor": {}
+      },
+      "PRICE01": {
+        "availability": "s1a4",
+        "currency": "s1a5",
+        "first_seen_at": "s1a6",
+        "form": "s1a7",
+        "id": "PRICE01",
+        "is_affiliate_link": false,
+        "is_stale": true,
+        "last_seen_at": "s1ab",
+        "peptide": {},
+        "price": "s1ad",
+        "price_changed_at": "s1ae",
+        "price_per_mg": "s1af",
+        "price_per_unit": "s1b0",
+        "product_id": "PRODUCT01",
+        "product_name": "s1b2",
+        "product_page_url": "s1b3",
+        "product_type": "s1b4",
+        "regular_price": "s1b5",
+        "ships_to": "s1b6",
+        "strength": {},
+        "vendor": {}
+      },
+      "PRICE02": {
+        "availability": "s276",
+        "currency": "s277",
+        "first_seen_at": "s278",
+        "form": "s279",
+        "id": "PRICE02",
+        "is_affiliate_link": false,
+        "is_stale": true,
+        "last_seen_at": "s27d",
+        "peptide": {},
+        "price": "s27f",
+        "price_changed_at": "s280",
+        "price_per_mg": "s281",
+        "price_per_unit": "s282",
+        "product_id": "PRODUCT01",
+        "product_name": "s284",
+        "product_page_url": "s285",
+        "product_type": "s286",
+        "regular_price": "s287",
+        "ships_to": "s288",
+        "strength": {},
+        "vendor": {}
+      }
+    }
+  },
+  "new": {
+    "price": {
+      "price_ref01": {
+        "availability": "s348",
+        "currency": "s349",
+        "first_seen_at": "s34a",
+        "form": "s34b",
+        "is_affiliate_link": false,
+        "is_stale": true,
+        "last_seen_at": "s34f",
+        "peptide": {},
+        "price": "s351",
+        "price_changed_at": "s352",
+        "price_per_mg": "s353",
+        "price_per_unit": "s354",
+        "product_id": "PRODUCT01",
+        "product_name": "s356",
+        "product_page_url": "s357",
+        "product_type": "s358",
+        "regular_price": "s359",
+        "ships_to": "s35a",
+        "strength": {},
+        "vendor": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /prices": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /prices/compare": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "existing": {
+    "vendor": {
+      "VENDOR00": {
+        "about": {},
+        "api_url": "sab",
+        "catalog": {},
+        "country": "sad",
+        "description": "sae",
+        "id": "VENDOR00",
+        "logo_url": "sb0",
+        "name": "sb1",
+        "product_categories": [],
+        "profile_url": "sb3",
+        "rating": {},
+        "region": "sb5",
+        "reviews": {},
+        "shipping": {},
+        "slug": "sb8",
+        "sources": {},
+        "website_url": "sba"
+      },
+      "VENDOR01": {
+        "about": {},
+        "api_url": "s155",
+        "catalog": {},
+        "country": "s157",
+        "description": "s158",
+        "id": "VENDOR01",
+        "logo_url": "s15a",
+        "name": "s15b",
+        "product_categories": [],
+        "profile_url": "s15d",
+        "rating": {},
+        "region": "s15f",
+        "reviews": {},
+        "shipping": {},
+        "slug": "s162",
+        "sources": {},
+        "website_url": "s164"
+      },
+      "VENDOR02": {
+        "about": {},
+        "api_url": "s1ff",
+        "catalog": {},
+        "country": "s201",
+        "description": "s202",
+        "id": "VENDOR02",
+        "logo_url": "s204",
+        "name": "s205",
+        "product_categories": [],
+        "profile_url": "s207",
+        "rating": {},
+        "region": "s209",
+        "reviews": {},
+        "shipping": {},
+        "slug": "s20c",
+        "sources": {},
+        "website_url": "s20e"
+      }
+    }
+  },
+  "new": {
+    "vendor": {
+      "vendor_ref01": {
+        "about": {},
+        "api_url": "s2a9",
+        "catalog": {},
+        "country": "s2ab",
+        "description": "s2ac",
+        "logo_url": "s2ae",
+        "name": "s2af",
+        "product_categories": [],
+        "profile_url": "s2b1",
+        "rating": {},
+        "region": "s2b3",
+        "reviews": {},
+        "shipping": {},
+        "slug": "s2b6",
+        "sources": {},
+        "website_url": "s2b8"
+      }
+    }
+  },
+  "requests": {
+    "GET /vendors/{id}/prices": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /vendors/{id}/products": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /vendors": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /vendors/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /vendors/compare": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /vendors/{id}/shipping": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}
